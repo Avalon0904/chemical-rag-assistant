@@ -1,0 +1,3102 @@
+{
+  "summary": {
+    "answered": 38,
+    "total_claims": 552,
+    "supported": 125,
+    "unsupported": 156,
+    "insufficient_info": 271,
+    "micro_faithfulness": 0.2264,
+    "micro_hallucination_rate": 0.2826,
+    "macro_hallucination_rate": 0.8158
+  },
+  "comparison": {
+    "closed_book": {
+      "answered": 38,
+      "total_claims": 552,
+      "supported": 125,
+      "unsupported": 156,
+      "insufficient_info": 271,
+      "micro_faithfulness": 0.2264,
+      "micro_hallucination_rate": 0.2826,
+      "macro_hallucination_rate": 0.8158
+    },
+    "rag": {
+      "answered": 38,
+      "total_claims": 240,
+      "supported": 229,
+      "unsupported": 7,
+      "insufficient_info": 4,
+      "micro_faithfulness": 0.9542,
+      "micro_hallucination_rate": 0.0292,
+      "macro_hallucination_rate": 0.1579
+    },
+    "delta_micro_hallucination": 0.2534,
+    "delta_macro_hallucination": 0.6579,
+    "note": "负 delta = RAG 相对裸生成的幻觉压制幅度（语料支撑口径）"
+  },
+  "details": [
+    {
+      "id": "q001",
+      "question": "THF（四氢呋喃）的沸点是多少？",
+      "answer_text": "- THF（四氢呋喃）的常压沸点约为 **66 °C**（更准确约 65–67 °C，常用值 66 °C）。\n- 该值为标准大气压（约 101.3 kPa）下的沸点；压力变化时沸点会随之变化。",
+      "claims": [
+        {
+          "claim": "THF（四氢呋喃）的常压沸点约为 66 °C。",
+          "verdict": "supported",
+          "evidence": "四氢呋喃（THF）| 109-99-9 | 66.0 | 互溶 | 钠丝-二苯甲酮回流（深度）；4Å 分子筛（快速） | 避光、充氮密封，防止过氧化物积累"
+        },
+        {
+          "claim": "THF（四氢呋喃）的常压沸点更准确约为 65–67 °C。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载THF沸点为66.0℃，断言给出65-67℃范围，与精确值66.0℃不一致，属于近似表述"
+        },
+        {
+          "claim": "THF（四氢呋喃）的常压沸点常用值为 66 °C。",
+          "verdict": "supported",
+          "evidence": "四氢呋喃（THF）| 109-99-9 | 66.0 | 互溶 | 钠丝-二苯甲酮回流（深度）；4Å 分子筛（快速） | 避光、充氮密封，防止过氧化物积累"
+        },
+        {
+          "claim": "该沸点值为标准大气压（约 101.3 kPa）下的沸点。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅标注\"沸点（℃）\"，未提及压力条件或标准大气压/101.3 kPa"
+        },
+        {
+          "claim": "压力变化时 THF 的沸点会随之变化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅列出THF的沸点数据，未讨论压力与沸点的关系"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q002",
+      "question": "二氯甲烷的沸点是多少？",
+      "answer_text": "- 二氯甲烷（DCM）的沸点约为 **39.6 °C**（常压，101.3 kPa）。\n- 该值为文献常见标准值，实际会随气压略有变化。",
+      "claims": [
+        {
+          "claim": "二氯甲烷（DCM）的沸点约为 39.6 °C（常压，101.3 kPa）。",
+          "verdict": "unsupported",
+          "evidence": "上下文中二氯甲烷的沸点为 39.8 ℃（来源 06-TABLE-常用有机溶剂物性与干燥-c002），与断言的 39.6 °C 不一致，近似值不满足精确一致要求"
+        },
+        {
+          "claim": "该值为文献常见标准值。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何关于\"文献常见标准值\"的信息"
+        },
+        {
+          "claim": "实际会随气压略有变化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及沸点随气压变化的相关内容"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q003",
+      "question": "丙酮应该用什么干燥剂干燥？",
+      "answer_text": "- **首选：无水硫酸钠（Na₂SO₄）或无水硫酸镁（MgSO₄）**：适用于常规实验室干燥，操作简便、兼容性好。\n- **可用：无水氯化钙（CaCl₂）**：也可干燥丙酮，但需注意可能形成加合物、过滤较慢。\n- **可用：分子筛（3A/4A）**：适合深度干燥，但需预先活化，且可能吸附少量丙酮。\n- **避免：碱性干燥剂（如NaOH、KOH）**：丙酮在强碱下易发生羟醛缩合等副反应。\n- **避免：五氧化二磷（P₂O₅）**：酸性强、反应活性高，可能引发丙酮缩合/聚合，一般不推荐。\n- **不确定点**：若需极低水含量（如无水级溶剂），具体干燥剂选择与预处理条件需结合纯度要求和后续用途确认。",
+      "claims": [
+        {
+          "claim": "首选：无水硫酸钠（Na₂SO₄）适用于常规实验室干燥，操作简便、兼容性好。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中未提及无水硫酸钠作为常规实验室干燥剂的首选推荐，仅在格氏试剂SOP中提到卤代烃使用前经无水硫酸钠干燥，未涉及丙酮或常规实验室干燥的首选评价。"
+        },
+        {
+          "claim": "首选：无水硫酸镁（MgSO₄）适用于常规实验室干燥，操作简便、兼容性好。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及无水硫酸镁。"
+        },
+        {
+          "claim": "可用：无水氯化钙（CaCl₂）也可干燥丙酮。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中丙酮的推荐干燥剂仅提及3Å或4Å分子筛，未提及无水氯化钙。"
+        },
+        {
+          "claim": "无水氯化钙（CaCl₂）干燥丙酮时需注意可能形成加合物。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及无水氯化钙与丙酮形成加合物的内容。"
+        },
+        {
+          "claim": "无水氯化钙（CaCl₂）干燥丙酮时过滤较慢。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及无水氯化钙干燥丙酮时过滤速度的内容。"
+        },
+        {
+          "claim": "可用：分子筛（3A/4A）适合深度干燥丙酮。",
+          "verdict": "unsupported",
+          "evidence": "上下文中丙酮的推荐干燥剂为'3Å或4Å分子筛'，但明确标注为一般无水要求，深度无水时优先选'钠丝-二苯甲酮回流或金属氢化物处理'，并非分子筛适合'深度'干燥丙酮。"
+        },
+        {
+          "claim": "分子筛（3A/4A）需预先活化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中提及分子筛作为干燥剂，但未提及需要预先活化的要求。"
+        },
+        {
+          "claim": "分子筛（3A/4A）可能吸附少量丙酮。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及分子筛吸附丙酮的内容。"
+        },
+        {
+          "claim": "避免：碱性干燥剂（如NaOH、KOH）用于干燥丙酮。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中丙酮的储存注意为'避免接触强碱与强氧化剂'，但未明确提及NaOH、KOH作为干燥剂的避免使用。"
+        },
+        {
+          "claim": "丙酮在强碱下易发生羟醛缩合等副反应。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中仅提及丙酮'避免接触强碱与强氧化剂'，未解释具体原因是否为羟醛缩合等副反应。"
+        },
+        {
+          "claim": "避免：五氧化二磷（P₂O₅）用于干燥丙酮。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及五氧化二磷。"
+        },
+        {
+          "claim": "五氧化二磷（P₂O₅）酸性强、反应活性高。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及五氧化二磷。"
+        },
+        {
+          "claim": "五氧化二磷（P₂O₅）可能引发丙酮缩合/聚合。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及五氧化二磷。"
+        },
+        {
+          "claim": "五氧化二磷（P₂O₅）一般不推荐用于干燥丙酮。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中完全未提及五氧化二磷。"
+        },
+        {
+          "claim": "若需极低水含量（如无水级溶剂），具体干燥剂选择与预处理条件需结合纯度要求和后续用途确认。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中提及'需深度无水（如无水无氧反应）时优先选钠丝-二苯甲酮回流或金属氢化物处理'，但未提及'结合纯度要求和后续用途确认'的表述。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q004",
+      "question": "久置的二氯甲烷有什么安全风险？",
+      "answer_text": "久置的二氯甲烷主要安全风险如下：\n\n- **生成光气（剧毒）**：长期接触空气、光照或受热时缓慢氧化分解，可生成光气（碳酰氯），吸入可致严重肺损伤甚至迟发性肺水肿。\n- **生成氯化氢/酸性产物**：水解或分解产生HCl，腐蚀容器、刺激呼吸道，并可能催化进一步分解。\n- **过氧化物风险（相对较低但需注意）**：与某些醚类不同，二氯甲烷一般不易形成爆炸性过氧化物，但久置样品中若混入其他溶剂或杂质，风险需评估。\n- **挥发与吸入暴露**：易挥发，久置容器若密封不良，通风不良场所可造成吸入暴露；其本身具麻醉性和中枢神经抑制作用。\n- **容器腐蚀/压力升高**：分解产酸可腐蚀金属容器，密闭容器内产气可能导致压力升高。\n- **纯度下降影响实验/工艺**：水分、酸度和分解产物积累会干扰反应、腐蚀设备或影响分析结果。\n\n**不确定说明**：光气生成速率受光照、温度、水分、容器材质和顶空空气比例影响很大，具体久置多长时间、何种储存条件下风险显著升高，需结合实际情况检测（如酸度、水分、光气检测）判断，不能一概而论。",
+      "claims": [
+        {
+          "claim": "久置的二氯甲烷长期接触空气、光照或受热时缓慢氧化分解可生成光气（碳酰氯）",
+          "verdict": "supported",
+          "evidence": "久置受光照可能生成光气，须避光保存"
+        },
+        {
+          "claim": "光气吸入可致严重肺损伤",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及二氯甲烷久置受光照可能生成光气，未提及光气的毒性或健康危害"
+        },
+        {
+          "claim": "光气吸入可致迟发性肺水肿",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及光气的具体毒性效应或迟发性肺水肿"
+        },
+        {
+          "claim": "二氯甲烷水解或分解产生HCl",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及二氯甲烷可能生成光气，未提及HCl的产生"
+        },
+        {
+          "claim": "HCl可腐蚀容器",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及HCl或其腐蚀性质"
+        },
+        {
+          "claim": "HCl可刺激呼吸道",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及HCl或其刺激性"
+        },
+        {
+          "claim": "HCl可能催化二氯甲烷进一步分解",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及HCl或其对二氯甲烷分解的催化作用"
+        },
+        {
+          "claim": "二氯甲烷一般不易形成爆炸性过氧化物",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及二氯甲烷是否形成过氧化物或其爆炸性"
+        },
+        {
+          "claim": "久置二氯甲烷样品中若混入其他溶剂或杂质，过氧化物风险需评估",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及混入其他溶剂或杂质的过氧化物风险评估"
+        },
+        {
+          "claim": "二氯甲烷易挥发",
+          "verdict": "insufficient_info",
+          "evidence": "上下文给出二氯甲烷沸点为39.8℃，但未明确评价其挥发性"
+        },
+        {
+          "claim": "久置二氯甲烷容器若密封不良，通风不良场所可造成吸入暴露",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及密封不良、通风不良或吸入暴露风险"
+        },
+        {
+          "claim": "二氯甲烷本身具麻醉性",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及二氯甲烷的麻醉性质"
+        },
+        {
+          "claim": "二氯甲烷具有中枢神经抑制作用",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及二氯甲烷的中枢神经抑制作用"
+        },
+        {
+          "claim": "二氯甲烷分解产酸可腐蚀金属容器",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及分解产酸或金属容器腐蚀"
+        },
+        {
+          "claim": "二氯甲烷在密闭容器内产气可能导致压力升高",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及产气或压力升高风险"
+        },
+        {
+          "claim": "久置二氯甲烷水分积累会干扰反应",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及水分积累或其对反应的干扰"
+        },
+        {
+          "claim": "久置二氯甲烷水分积累会腐蚀设备",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及水分积累或设备腐蚀"
+        },
+        {
+          "claim": "久置二氯甲烷水分积累会影响分析结果",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及水分积累或对分析结果的影响"
+        },
+        {
+          "claim": "久置二氯甲烷酸度积累会干扰反应",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及酸度积累或其对反应的干扰"
+        },
+        {
+          "claim": "久置二氯甲烷酸度积累会腐蚀设备",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及酸度积累或设备腐蚀"
+        },
+        {
+          "claim": "久置二氯甲烷酸度积累会影响分析结果",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及酸度积累或对分析结果的影响"
+        },
+        {
+          "claim": "久置二氯甲烷分解产物积累会干扰反应",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及分解产物积累或其对反应的干扰"
+        },
+        {
+          "claim": "久置二氯甲烷分解产物积累会腐蚀设备",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及分解产物积累或设备腐蚀"
+        },
+        {
+          "claim": "久置二氯甲烷分解产物积累会影响分析结果",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及分解产物积累或对分析结果的影响"
+        },
+        {
+          "claim": "光气生成速率受光照影响很大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及'久置受光照可能生成光气'，但未说明光照对生成速率的影响程度"
+        },
+        {
+          "claim": "光气生成速率受温度影响很大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及温度对光气生成速率的影响"
+        },
+        {
+          "claim": "光气生成速率受水分影响很大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及水分对光气生成速率的影响"
+        },
+        {
+          "claim": "光气生成速率受容器材质影响很大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质对光气生成速率的影响"
+        },
+        {
+          "claim": "光气生成速率受顶空空气比例影响很大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及顶空空气比例或氧气浓度对光气生成速率的影响"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q005",
+      "question": "DMF 的沸点是多少？",
+      "answer_text": "- DMF（N,N-二甲基甲酰胺）的常压沸点约为 **153 °C**（在 101.3 kPa 下）。\n- 文献常见值范围约 **152–154 °C**，具体数值随压力与纯度略有差异。\n- 注意：DMF 在高温（尤其接近沸点或更高）下可能缓慢分解，精馏时需留意。",
+      "claims": [
+        {
+          "claim": "DMF（N,N-二甲基甲酰胺）的常压沸点约为 153 °C（在 101.3 kPa 下）。",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】表格中 DMF 沸点（℃）列显示为 153.0"
+        },
+        {
+          "claim": "DMF 的常压沸点约为 153 °C。",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】表格中 DMF 沸点（℃）列显示为 153.0"
+        },
+        {
+          "claim": "DMF 在 101.3 kPa 下的沸点约为 153 °C。",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】表格中 DMF 沸点（℃）列显示为 153.0，该表为常压物性表"
+        },
+        {
+          "claim": "DMF 的文献常见沸点值范围约 152–154 °C。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅给出精确值 153.0 °C，未提及 152–154 °C 的范围"
+        },
+        {
+          "claim": "DMF 的沸点具体数值随压力略有差异。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供常压沸点 153.0 °C，未提及压力对沸点的影响"
+        },
+        {
+          "claim": "DMF 的沸点具体数值随纯度略有差异。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供沸点 153.0 °C，未提及纯度对沸点的影响"
+        },
+        {
+          "claim": "DMF 在高温下可能缓慢分解。",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】储存注意列：\"久置分解产生二甲胺，需密封\""
+        },
+        {
+          "claim": "DMF 在接近沸点或更高温度下可能缓慢分解。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及\"久置分解产生二甲胺\"，未说明分解温度条件为\"接近沸点或更高温度\""
+        },
+        {
+          "claim": "DMF 精馏时需注意其高温分解。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及\"久置分解产生二甲胺，需密封\"和\"减压蒸馏\"作为干燥方法，但未明确提及\"精馏时需注意高温分解\"的警示"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q006",
+      "question": "格氏试剂引发困难时，SOP 建议的处理方法有哪些？",
+      "answer_text": "格氏试剂引发困难时，SOP 常见处理建议如下（具体以企业SOP为准）：\n\n- **确认试剂与溶剂质量**：检查镁屑是否氧化/受潮、卤代烃是否纯度足够、溶剂（如THF/乙醚）是否充分干燥除水。\n- **机械活化镁**：用玻璃棒或刮刀摩擦镁屑表面破坏氧化层；或使用新剪/新锉的镁屑。\n- **加入引发剂/活化剂**：加入少量碘（I₂）至反应液呈淡紫色并褪去；或加入1,2-二溴乙烷等活化镁表面。\n- **预热引发**：先加入少量卤代烃，温和加热引发后再分批滴加剩余卤代烃，控制滴加速率避免积累。\n- **稀释与搅拌**：适当稀释反应体系、加强搅拌，避免局部浓度过高或镁屑沉降包裹。\n- **更换引发方式**：改用已引发好的格氏试剂“引种”（接种少量活性格氏试剂）；或改用Rieke镁、镁粉/镁条等活性更高的镁源。\n- **排查干扰杂质**：确认卤代烃中无酸、醇、水等淬灭性杂质；必要时重新蒸馏/干燥处理。\n\n不确定说明：不同企业SOP在活化剂种类（碘、1,2-二溴乙烷、DIBAL-H等）、加热上限及废弃处理上有差异，以上为通用做法，具体操作参数需参照本单位SOP。",
+      "claims": [
+        {
+          "claim": "格氏试剂引发困难时，SOP常见处理建议包括确认试剂与溶剂质量",
+          "verdict": "supported",
+          "evidence": "【本页表格】| 现象 | 可能原因 | 处理措施 | | --- | --- | --- | | 引发困难（10 min 内无气泡） | 镁屑表面氧化、THF 含水超标 | ①补加碘晶体；②滴加 2–3 滴1,2-二溴乙烷；③置于超声波浴中处理5–10 min |"
+        },
+        {
+          "claim": "检查镁屑是否氧化",
+          "verdict": "supported",
+          "evidence": "| 引发困难（10 min 内无气泡） | 镁屑表面氧化、THF 含水超标 |"
+        },
+        {
+          "claim": "检查镁屑是否受潮",
+          "verdict": "unsupported",
+          "evidence": "上下文提及\"镁屑表面氧化、THF 含水超标\"作为引发困难原因，但未提及\"镁屑受潮\"这一具体表述；镁屑要求\"新开封或经 120 ℃ 烘箱干燥 2 h\"，未提受潮检查"
+        },
+        {
+          "claim": "检查卤代烃纯度是否足够",
+          "verdict": "unsupported",
+          "evidence": "上下文提及卤代烃\"使用前经无水硫酸钠干燥、重蒸\"，但未将\"纯度\"列为引发困难的检查项"
+        },
+        {
+          "claim": "检查溶剂（如THF/乙醚）是否充分干燥除水",
+          "verdict": "supported",
+          "evidence": "| 引发困难（10 min 内无气泡） | 镁屑表面氧化、THF 含水超标 |；溶剂四氢呋喃（THF）：须经钠丝-二苯甲酮回流至深蓝色且颜色稳定（表明深度干燥、无过氧化物），现蒸现用"
+        },
+        {
+          "claim": "用玻璃棒或刮刀摩擦镁屑表面破坏氧化层可机械活化镁",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"玻璃棒或刮刀摩擦\"的处理方法；处理措施为\"①补加碘晶体；②滴加 2–3 滴1,2-二溴乙烷；③置于超声波浴中处理5–10 min\""
+        },
+        {
+          "claim": "使用新剪/新锉的镁屑可机械活化镁",
+          "verdict": "unsupported",
+          "evidence": "上下文要求\"镁屑：60 目，新开封或经 120 ℃ 烘箱干燥 2 h\"，未提及\"新剪/新锉\"或\"机械活化\"概念"
+        },
+        {
+          "claim": "加入少量碘（I₂）至反应液呈淡紫色并褪去可作为引发剂/活化剂",
+          "verdict": "supported",
+          "evidence": "加入一小粒碘晶体（约 1–2 mg）或 2–3 滴 1,2-二溴乙烷作为引发剂；①补加碘晶体"
+        },
+        {
+          "claim": "加入1,2-二溴乙烷可活化镁表面",
+          "verdict": "supported",
+          "evidence": "加入一小粒碘晶体（约 1–2 mg）或 2–3 滴 1,2-二溴乙烷作为引发剂；②滴加 2–3 滴1,2-二溴乙烷"
+        },
+        {
+          "claim": "先加入少量卤代烃，温和加热引发后再分批滴加剩余卤代烃可用于预热引发",
+          "verdict": "unsupported",
+          "evidence": "上下文操作步骤为\"加入少量 THF 没过镁屑，加入一小粒碘晶体...温热至微沸引发反应\"，未提及先加少量卤代烃的预热引发方式"
+        },
+        {
+          "claim": "控制滴加速率避免积累",
+          "verdict": "supported",
+          "evidence": "将剩余卤代烃-THF 混合液缓慢滴加，滴加速度以控制体系温度在 25–30 ℃ 为准；若放热剧烈，立即用冰浴降温并减缓滴加"
+        },
+        {
+          "claim": "适当稀释反应体系可避免局部浓度过高或镁屑沉降包裹",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"稀释反应体系\"作为避免局部浓度过高的措施"
+        },
+        {
+          "claim": "加强搅拌可避免局部浓度过高或镁屑沉降包裹",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"加强搅拌\"作为处理措施"
+        },
+        {
+          "claim": "改用已引发好的格氏试剂\"引种\"（接种少量活性格氏试剂）可更换引发方式",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"引种\"或\"接种\"方法"
+        },
+        {
+          "claim": "改用Rieke镁可更换引发方式",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"Rieke镁\""
+        },
+        {
+          "claim": "改用镁粉/镁条等活性更高的镁源可更换引发方式",
+          "verdict": "unsupported",
+          "evidence": "上下文规定\"镁屑：60 目\"，未提及镁粉/镁条作为替代方案"
+        },
+        {
+          "claim": "确认卤代烃中无酸等淬灭性杂质",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"酸\"作为淬灭性杂质"
+        },
+        {
+          "claim": "确认卤代烃中无醇等淬灭性杂质",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"醇\"作为淬灭性杂质"
+        },
+        {
+          "claim": "确认卤代烃中无水等淬灭性杂质",
+          "verdict": "supported",
+          "evidence": "水的存在会导致格氏试剂淬灭（生成 RH 和 Mg(OH)X）；卤代烃：使用前经无水硫酸钠干燥、重蒸"
+        },
+        {
+          "claim": "必要时重新蒸馏处理卤代烃",
+          "verdict": "supported",
+          "evidence": "卤代烃：使用前经无水硫酸钠干燥、重蒸"
+        },
+        {
+          "claim": "必要时干燥处理卤代烃",
+          "verdict": "supported",
+          "evidence": "卤代烃：使用前经无水硫酸钠干燥、重蒸"
+        },
+        {
+          "claim": "不同企业SOP在活化剂种类上有差异",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供本单位SOP，未提及其他企业SOP"
+        },
+        {
+          "claim": "活化剂种类包括碘",
+          "verdict": "supported",
+          "evidence": "加入一小粒碘晶体（约 1–2 mg）或 2–3 滴 1,2-二溴乙烷作为引发剂"
+        },
+        {
+          "claim": "活化剂种类包括1,2-二溴乙烷",
+          "verdict": "supported",
+          "evidence": "加入一小粒碘晶体（约 1–2 mg）或 2–3 滴 1,2-二溴乙烷作为引发剂"
+        },
+        {
+          "claim": "活化剂种类包括DIBAL-H",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"DIBAL-H\"作为活化剂"
+        },
+        {
+          "claim": "不同企业SOP在加热上限上有差异",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供本单位SOP，未提及其他企业SOP"
+        },
+        {
+          "claim": "不同企业SOP在废弃处理上有差异",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供本单位SOP，未提及其他企业SOP"
+        },
+        {
+          "claim": "具体操作参数需参照本单位SOP",
+          "verdict": "supported",
+          "evidence": "文档类型：SOP（标准操作规程）；本实验室所有涉及格氏反应的小试及放大实验"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q007",
+      "question": "格氏反应引发后滴加卤代烃时，体系温度应控制在什么范围？",
+      "answer_text": "- **一般范围**：格氏反应引发后滴加卤代烃时，体系温度通常控制在 **20–40 ℃**（室温至微回流），具体视溶剂和底物活性而定。\n- **乙醚体系**：常用 **20–35 ℃**，避免过低导致引发停滞、过高导致偶联副反应增多。\n- **THF体系**：可控制在 **20–40 ℃**，THF沸点较高（约66 ℃），必要时可稍高但不宜长时间超过40 ℃。\n- **活性高的卤代烃**（如烯丙基、苄基卤）：建议偏低（**10–25 ℃**），防止放热失控和Wurtz偶联。\n- **活性低的卤代烃**（如芳基氯）：可适当提高至 **35–45 ℃** 或微回流以维持反应速率。\n- **关键原则**：以“平稳回流、可控放热”为准，滴加速度与冷却联动，避免局部过热。\n- **不确定说明**：具体最佳温度需依据底物、溶剂、浓度和规模优化，以上为常见经验范围，非绝对标准。",
+      "claims": [
+        {
+          "claim": "格氏反应引发后滴加卤代烃时，体系温度通常控制在 20–40 ℃",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及THF体系中滴加温度控制在25–30 ℃，未提及20–40 ℃范围"
+        },
+        {
+          "claim": "乙醚体系中格氏反应滴加卤代烃温度常用 20–35 ℃",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及乙醚体系，仅涉及THF体系"
+        },
+        {
+          "claim": "乙醚体系中温度过低会导致引发停滞",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及乙醚体系，引发停滞的原因仅提及镁屑表面氧化、THF含水超标、体系进水或滴加过快致温度骤降"
+        },
+        {
+          "claim": "乙醚体系中温度过高会导致偶联副反应增多",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及乙醚体系及偶联副反应"
+        },
+        {
+          "claim": "THF体系中格氏反应滴加卤代烃温度可控制在 20–40 ℃",
+          "verdict": "unsupported",
+          "evidence": "上下文明确控制体系温度在25–30 ℃，20–40 ℃范围超出该精确范围"
+        },
+        {
+          "claim": "THF沸点约为 66 ℃",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】四氢呋喃（THF）沸点（℃）66.0"
+        },
+        {
+          "claim": "THF体系中温度必要时可稍高但不宜长时间超过 40 ℃",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及温度可稍高或不宜长时间超过40 ℃的要求"
+        },
+        {
+          "claim": "活性高的卤代烃（如烯丙基、苄基卤）格氏反应滴加温度建议偏低（10–25 ℃）",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及烯丙基、苄基卤等活性高的卤代烃，也未提及10–25 ℃的温度建议"
+        },
+        {
+          "claim": "活性高的卤代烃温度偏高会导致放热失控",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及活性高的卤代烃及放热失控的具体关联"
+        },
+        {
+          "claim": "活性高的卤代烃温度偏高会导致 Wurtz 偶联",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Wurtz偶联反应"
+        },
+        {
+          "claim": "活性低的卤代烃（如芳基氯）格氏反应温度可适当提高至 35–45 ℃",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及芳基氯等活性低的卤代烃，也未提及35–45 ℃的温度范围"
+        },
+        {
+          "claim": "活性低的卤代烃格氏反应可采用微回流以维持反应速率",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及微回流操作"
+        },
+        {
+          "claim": "格氏反应滴加以“平稳回流、可控放热”为准",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及该表述，仅提及滴加速度以控制体系温度在25–30 ℃为准"
+        },
+        {
+          "claim": "格氏反应滴加速度与冷却联动",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及若放热剧烈立即用冰浴降温并减缓滴加，但未明确表述为'滴加速度与冷却联动'"
+        },
+        {
+          "claim": "格氏反应滴加需避免局部过热",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确提及局部过热问题"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q008",
+      "question": "THF 深度干燥合格的标志是什么？",
+      "answer_text": "- **水分指标合格**：THF 经深度干燥后，含水量通常需降至 **≤100 ppm**（部分工艺要求 ≤50 ppm 甚至 ≤20 ppm），具体限值取决于下游用途（如格氏反应、锂电、聚合等）。\n- **卡尔·费休滴定验证**：以卡尔·费休库仑法（微量水分仪）测定，结果稳定低于规定限值，且平行样重复性好。\n- **外观与气味正常**：无色透明、无浑浊、无明显异味（THF 吸湿或氧化会带来异常）。\n- **过氧化物合格**：深度干燥常伴随除过氧化物，需检测过氧化物含量低于安全限值（如 ≤0.005%–0.01% 或按企业标准）。\n- **稳定性复测合格**：密封取样后复测水分不反弹，说明干燥与储存措施有效。\n\n不确定点：具体“合格”水分限值因行业/工艺而异，需以企业标准或下游工艺要求为准；若您指某特定标准（如锂电级、药用级），请补充以便精确回答。",
+      "claims": [
+        {
+          "claim": "THF 经深度干燥后，含水量通常需降至 ≤100 ppm [n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及THF须经钠丝-二苯甲酮回流至深蓝色且颜色稳定（表明深度干燥、无过氧化物），未提及任何具体含水量数值或ppm限值"
+        },
+        {
+          "claim": "部分工艺要求含水量 ≤50 ppm [n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何关于含水量≤50 ppm的具体要求"
+        },
+        {
+          "claim": "部分工艺要求含水量 ≤20 ppm [n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何关于含水量≤20 ppm的具体要求"
+        },
+        {
+          "claim": "具体限值取决于下游用途（如格氏反应、锂电、聚合等）[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及格氏反应用途，未提及其他用途如锂电、聚合等，也未讨论不同用途对应不同水分限值"
+        },
+        {
+          "claim": "以卡尔·费休库仑法（微量水分仪）测定水分，结果稳定低于规定限值[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及卡尔·费休库仑法或任何水分测定方法"
+        },
+        {
+          "claim": "卡尔·费休库仑法测定平行样重复性好[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及卡尔·费休库仑法或平行样重复性相关内容"
+        },
+        {
+          "claim": "THF 外观为无色透明[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未描述THF的外观特征"
+        },
+        {
+          "claim": "THF 无浑浊[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未描述THF的外观特征或浑浊情况"
+        },
+        {
+          "claim": "THF 无明显异味[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未描述THF的气味特征"
+        },
+        {
+          "claim": "THF 吸湿或氧化会带来异常[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及THF需防止过氧化物积累，但未明确讨论吸湿或氧化带来的具体异常表现"
+        },
+        {
+          "claim": "深度干燥常伴随除过氧化物[n]",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c004】'溶剂四氢呋喃（THF）：须经钠丝-二苯甲酮回流至深蓝色且颜色稳定（表明深度干燥、无过氧化物），现蒸现用'；以及【06-TABLE-常用有机溶剂物性与干燥-c001】'避光、充氮密封，防止过氧化物积累'"
+        },
+        {
+          "claim": "过氧化物含量需低于安全限值 ≤0.005%–0.01% [n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及需防止过氧化物积累，但未给出任何具体的过氧化物含量限值数值（如≤0.005%–0.01%）"
+        },
+        {
+          "claim": "过氧化物含量需按企业标准低于安全限值[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及企业标准或过氧化物含量的具体安全限值标准"
+        },
+        {
+          "claim": "密封取样后复测水分不反弹[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及密封取样、复测水分或水分反弹相关内容"
+        },
+        {
+          "claim": "干燥与储存措施有效[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文描述了干燥与储存措施，但未明确断言这些措施'有效'的评价性结论"
+        },
+        {
+          "claim": "具体“合格”水分限值因行业/工艺而异，需以企业标准或下游工艺要求为准[n]",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未讨论不同行业/工艺的水分限值差异，也未提及需以企业标准或下游工艺要求为准的原则"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q009",
+      "question": "格氏反应开始前氮气置换至少要几次？",
+      "answer_text": "- 格氏反应前氮气置换次数无统一强制标准，通常至少 **3次**（抽真空-充氮循环），要求氧含量降至 **<1%（理想<0.5%）**、水分露点 **<-40℃**。\n- 实际次数取决于设备密封性、真空能力、溶剂/镁屑质量及安全等级；小试常用3次，中试/生产可能需5次以上并在线监测。\n- 不确定原因：不同企业SOP、反应规模与安全规范差异较大，无公开统一规定；建议以氧含量/水分检测达标为准，而非固定次数。",
+      "claims": [
+        {
+          "claim": "格氏反应前氮气置换无统一强制标准",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及本实验室SOP要求\"氮气置换不少于3次\"，未提及是否存在统一强制标准或各企业差异"
+        },
+        {
+          "claim": "格氏反应前氮气置换通常至少3次抽真空-充氮循环",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c005】\"系统抽真空-充氮气循环置换，氮气置换不少于3次\""
+        },
+        {
+          "claim": "格氏反应要求氧含量降至<1%",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何关于氧含量具体数值的要求"
+        },
+        {
+          "claim": "格氏反应理想氧含量<0.5%",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何关于氧含量具体数值的要求"
+        },
+        {
+          "claim": "格氏反应要求水分露点<-40℃",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何关于水分露点具体数值的要求"
+        },
+        {
+          "claim": "氮气置换实际次数取决于设备密封性",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及氮气置换次数与设备密封性的关系"
+        },
+        {
+          "claim": "氮气置换实际次数取决于真空能力",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及氮气置换次数与真空能力的关系"
+        },
+        {
+          "claim": "氮气置换实际次数取决于溶剂/镁屑质量",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及氮气置换次数与溶剂或镁屑质量的关系"
+        },
+        {
+          "claim": "氮气置换实际次数取决于安全等级",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及氮气置换次数与安全等级的关系"
+        },
+        {
+          "claim": "小试常用3次氮气置换",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅规定\"不少于3次\"，未区分小试与中试/生产的次数差异，也未提及\"常用\"3次的说法"
+        },
+        {
+          "claim": "中试/生产可能需5次以上氮气置换",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及中试或生产规模的氮气置换次数要求"
+        },
+        {
+          "claim": "中试/生产需在线监测",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及中试/生产是否需要在线监测"
+        },
+        {
+          "claim": "不同企业SOP差异较大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供一份SOP，未提及其他企业SOP或差异情况"
+        },
+        {
+          "claim": "反应规模与安全规范差异较大",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及不同反应规模对应的安全规范差异"
+        },
+        {
+          "claim": "无公开统一规定",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅涉及一份内部SOP，未提及是否存在公开统一规定"
+        },
+        {
+          "claim": "建议以氧含量/水分检测达标为准",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及以氧含量或水分检测达标作为判断标准"
+        },
+        {
+          "claim": "建议不以固定次数为准",
+          "verdict": "unsupported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c005】明确要求\"氮气置换不少于3次\"，即以固定次数为最低标准，与\"不以固定次数为准\"矛盾"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q010",
+      "question": "反应剩余的格氏试剂废液应该怎么处理？",
+      "answer_text": "处理反应剩余的格氏试剂废液，核心原则是**先淬灭、再分液、后处置**，严禁直接倒入水槽或废液桶。\n\n- **淬灭（关键步骤）**：在通风橱内、冰浴冷却下，缓慢滴加饱和氯化铵水溶液或稀盐酸（也可用乙醇/异丙醇缓慢淬灭），并搅拌至无气泡产生，确保剩余格氏试剂完全分解。\n- **分液与中和**：淬灭后分层，有机相（含溶剂和副产物）转入有机废液桶；水相检测pH，中和至中性后按含盐废水处理。\n- **固体残渣**：若有镁盐沉淀，过滤后按无机固体废物处置，不可混入有机废液。\n- **安全注意**：淬灭过程放热且产生烷烃气体，须缓慢滴加、保持冷却和通风，避免密闭容器操作。\n- **合规处置**：最终废液应贴标签、分类收集，交由有资质的危废处理单位处置，具体类别依当地法规确定。\n\n不确定之处：不同地区对含镁盐废水/有机废液的危废分类和排放限值规定不同，建议以当地环保法规和单位EHS要求为准。",
+      "claims": [
+        {
+          "claim": "处理反应剩余的格氏试剂废液，核心原则是先淬灭、再分液、后处置",
+          "verdict": "supported",
+          "evidence": "应在冰浴、搅拌条件下，向体系中缓慢滴加无水异丙醇进行淬灭...至无气泡产生后再加入饱和氯化铵溶液，静置分层，水相按含盐有机废液处理"
+        },
+        {
+          "claim": "严禁将格氏试剂废液直接倒入水槽",
+          "verdict": "supported",
+          "evidence": "反应残余的格氏试剂严禁直接倒入水槽"
+        },
+        {
+          "claim": "严禁将格氏试剂废液直接倒入废液桶",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及\"严禁直接倒入水槽\"，未提及\"废液桶\"；淬灭后水相按含盐有机废液处理，暗示需倒入相应废液桶，与断言矛盾"
+        },
+        {
+          "claim": "淬灭操作应在通风橱内进行",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及通风橱"
+        },
+        {
+          "claim": "淬灭操作应在冰浴冷却下进行",
+          "verdict": "supported",
+          "evidence": "应在冰浴、搅拌条件下，向体系中缓慢滴加无水异丙醇进行淬灭"
+        },
+        {
+          "claim": "淬灭时缓慢滴加饱和氯化铵水溶液",
+          "verdict": "unsupported",
+          "evidence": "上下文为\"缓慢滴加无水异丙醇进行淬灭...至无气泡产生后再加入饱和氯化铵溶液\"，饱和氯化铵是第二步而非淬灭剂"
+        },
+        {
+          "claim": "淬灭时可用稀盐酸缓慢滴加",
+          "verdict": "unsupported",
+          "evidence": "上下文仅规定用无水异丙醇淬灭，未提及稀盐酸"
+        },
+        {
+          "claim": "淬灭时可用乙醇缓慢淬灭",
+          "verdict": "unsupported",
+          "evidence": "上下文仅规定用无水异丙醇淬灭，未提及乙醇"
+        },
+        {
+          "claim": "淬灭时可用异丙醇缓慢淬灭",
+          "verdict": "supported",
+          "evidence": "向体系中缓慢滴加无水异丙醇进行淬灭"
+        },
+        {
+          "claim": "淬灭过程需搅拌至无气泡产生",
+          "verdict": "supported",
+          "evidence": "在冰浴、搅拌条件下...至无气泡产生后再加入饱和氯化铵溶液"
+        },
+        {
+          "claim": "淬灭需确保剩余格氏试剂完全分解",
+          "verdict": "supported",
+          "evidence": "至无气泡产生后再加入饱和氯化铵溶液，隐含需完全分解"
+        },
+        {
+          "claim": "淬灭后分层，有机相转入有机废液桶",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及\"静置分层，水相按含盐有机废液处理\"，未提及有机相去向及\"有机废液桶\""
+        },
+        {
+          "claim": "有机相含溶剂和副产物",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确提及有机相组成"
+        },
+        {
+          "claim": "水相检测pH",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及pH检测"
+        },
+        {
+          "claim": "水相需中和至中性后按含盐废水处理",
+          "verdict": "unsupported",
+          "evidence": "上下文为\"水相按含盐有机废液处理\"，未提及\"中和至中性\"及\"废水\""
+        },
+        {
+          "claim": "若有镁盐沉淀，过滤后按无机固体废物处置",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及镁盐沉淀及固体废物处置"
+        },
+        {
+          "claim": "镁盐沉淀不可混入有机废液",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及镁盐沉淀"
+        },
+        {
+          "claim": "淬灭过程放热",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确提及放热，仅提及冰浴冷却"
+        },
+        {
+          "claim": "淬灭过程产生烷烃气体",
+          "verdict": "unsupported",
+          "evidence": "上下文提及\"初始阶段有气体放出\"，但未说明是烷烃气体；格氏试剂淬灭生成RH（烷烃），但气体身份未明确"
+        },
+        {
+          "claim": "淬灭须缓慢滴加",
+          "verdict": "supported",
+          "evidence": "缓慢滴加无水异丙醇进行淬灭"
+        },
+        {
+          "claim": "淬灭须保持冷却",
+          "verdict": "supported",
+          "evidence": "在冰浴...条件下"
+        },
+        {
+          "claim": "淬灭须保持通风",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及通风要求"
+        },
+        {
+          "claim": "淬灭应避免密闭容器操作",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及密闭容器"
+        },
+        {
+          "claim": "最终废液应贴标签",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及标签"
+        },
+        {
+          "claim": "最终废液应分类收集",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及\"按含盐有机废液处理\"，未明确\"分类收集\""
+        },
+        {
+          "claim": "最终废液应交有资质的危废处理单位处置",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及危废处理单位；仅金属钠SDS提及\"移交有资质的危废处置单位\""
+        },
+        {
+          "claim": "废液具体类别依当地法规确定",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        },
+        {
+          "claim": "不同地区对含镁盐废水的危废分类规定不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        },
+        {
+          "claim": "不同地区对含镁盐废水的排放限值规定不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        },
+        {
+          "claim": "不同地区对有机废液的危废分类规定不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        },
+        {
+          "claim": "不同地区对有机废液的排放限值规定不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        },
+        {
+          "claim": "建议以当地环保法规为准",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        },
+        {
+          "claim": "建议以单位EHS要求为准",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q011",
+      "question": "为什么格氏反应全程严禁明火？",
+      "answer_text": "- **产生易燃易爆气体**：格氏反应常以乙醚、四氢呋喃等低闪点溶剂进行，反应或后处理中可能生成氢气等可燃气体，明火可直接引燃。\n- **溶剂极易挥发燃爆**：乙醚闪点约-45℃，THF闪点约-14℃，蒸气与空气可形成爆炸性混合物，明火是明确点火源。\n- **反应放热剧烈**：格氏试剂制备及后续反应放热强，易局部过热、冲料或溶剂蒸气积聚，明火会显著增加着火爆炸风险。\n- **格氏试剂本身活泼**：对水、氧、卤代烃等敏感，异常反应或淬灭时可能剧烈放热、喷溅，明火会放大事故后果。\n- **安全规范要求**：此类反应通常要求消除点火源，使用防爆电器、接地、惰性气氛等；明火属于应严格禁止的点火源。\n\n不确定点：具体风险程度取决于溶剂、底物、规模与操作条件，以上为通用原因。",
+      "claims": [
+        {
+          "claim": "格氏反应常以乙醚、四氢呋喃等低闪点溶剂进行",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及THF作为格氏试剂制备溶剂，未提及乙醚，也未提及\"低闪点\"这一性质描述"
+        },
+        {
+          "claim": "格氏反应或后处理中可能生成氢气等可燃气体",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c008】\"向体系中缓慢滴加无水异丙醇进行淬灭（初始阶段有气体放出，须防止冲料）\"；金属钠遇水放氢气的描述在钠的SDS中，但格氏反应本身未明确提及氢气"
+        },
+        {
+          "claim": "明火可直接引燃格氏反应产生的易燃易爆气体",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及THF蒸气易燃易爆及禁止明火，但未明确说明\"可直接引燃\"格氏反应产生的气体"
+        },
+        {
+          "claim": "乙醚闪点约-45℃",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中未提及乙醚的闪点数据"
+        },
+        {
+          "claim": "THF闪点约-14℃",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中未提及THF的闪点具体数值"
+        },
+        {
+          "claim": "乙醚、THF蒸气与空气可形成爆炸性混合物",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及THF\"蒸气易燃易爆\"，但未提及\"与空气形成爆炸性混合物\"，也未提及乙醚"
+        },
+        {
+          "claim": "明火是明确的点火源",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c006】\"全程严禁明火：THF 蒸气易燃易爆，实验区域禁止明火、静电与火花\""
+        },
+        {
+          "claim": "格氏试剂制备及后续反应放热强",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c005】\"滴加速度以控制体系温度在 25–30 ℃为准；若放热剧烈，立即用冰浴降温并减缓滴加\""
+        },
+        {
+          "claim": "格氏反应易局部过热",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及放热剧烈需控制温度，但未明确提及\"局部过热\""
+        },
+        {
+          "claim": "格氏反应易冲料",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c008】\"初始阶段有气体放出，须防止冲料\""
+        },
+        {
+          "claim": "格氏反应易溶剂蒸气积聚",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及溶剂蒸气积聚的问题"
+        },
+        {
+          "claim": "明火会显著增加格氏反应的着火爆炸风险",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c006】\"全程严禁明火：THF 蒸气易燃易爆，实验区域禁止明火、静电与火花\""
+        },
+        {
+          "claim": "格氏试剂本身对水敏感",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c003】\"该反应对水分和氧气极其敏感，水的存在会导致格氏试剂淬灭（生成 RH 和 Mg(OH)X）\""
+        },
+        {
+          "claim": "格氏试剂本身对氧敏感",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c003】\"该反应对水分和氧气极其敏感\""
+        },
+        {
+          "claim": "格氏试剂本身对卤代烃敏感",
+          "verdict": "unsupported",
+          "evidence": "上下文明确指出格氏试剂由卤代烃与镁反应生成，卤代烃是反应原料而非敏感因素；上下文未提及格氏试剂对卤代烃敏感"
+        },
+        {
+          "claim": "格氏试剂在异常反应或淬灭时可能剧烈放热",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及淬灭时\"有气体放出\"，但未提及\"剧烈放热\""
+        },
+        {
+          "claim": "格氏试剂在异常反应或淬灭时可能喷溅",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及淬灭时\"须防止冲料\"，但未明确提及\"喷溅\""
+        },
+        {
+          "claim": "明火会放大格氏反应事故后果",
+          "verdict": "insufficient_info",
+          "evidence": "上下文禁止明火，但未明确论述明火会\"放大事故后果\""
+        },
+        {
+          "claim": "格氏反应通常要求消除点火源",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c006】\"实验区域禁止明火、静电与火花\""
+        },
+        {
+          "claim": "格氏反应通常要求使用防爆电器",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及防爆电器的要求"
+        },
+        {
+          "claim": "格氏反应通常要求接地",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及接地的要求"
+        },
+        {
+          "claim": "格氏反应通常要求惰性气氛",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c005】\"系统抽真空-充氮气循环置换，氮气置换不少于 3 次，反应全程保持氮气微正压\""
+        },
+        {
+          "claim": "明火属于格氏反应应严格禁止的点火源",
+          "verdict": "supported",
+          "evidence": "【01-SOP-格氏试剂制备与使用-c006】\"全程严禁明火：THF 蒸气易燃易爆，实验区域禁止明火、静电与火花\""
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q012",
+      "question": "金属钠的 CAS 号是多少？",
+      "answer_text": "- 金属钠的 CAS 号是 **7440-23-5**。",
+      "claims": [
+        {
+          "claim": "金属钠的 CAS 号是 7440-23-5。",
+          "verdict": "supported",
+          "evidence": "CAS 号：7440-23-5"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q013",
+      "question": "金属钠着火可以用水基灭火器扑灭吗？",
+      "answer_text": "不能。原因如下：\n\n- **剧烈反应**：金属钠与水接触会剧烈反应生成氢气并放热，可能引发爆炸或火势扩大。\n- **水基灭火器含水分**：喷射后无法隔绝水分与钠的接触，反而加剧反应。\n- **正确做法**：应使用干燥的氯化钠粉末、干燥砂土或专用D类金属火灾灭火器扑灭。\n- **不确定点**：具体现场处置还需结合火势规模与通风条件，建议遵循应急预案与专业消防指导。",
+      "claims": [
+        {
+          "claim": "不能。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及该断言所指的具体情境或问题，无法判断其含义"
+        },
+        {
+          "claim": "金属钠与水接触会剧烈反应生成氢气并放热，可能引发爆炸或火势扩大。",
+          "verdict": "supported",
+          "evidence": "金属钠遇水发生剧烈反应，生成氢氧化钠并放出氢气，反应放热可使氢气自燃甚至爆炸"
+        },
+        {
+          "claim": "水基灭火器含水分。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及\"水基灭火器\"的成分或定义，虽可推断含水，但上下文未明确提及该概念"
+        },
+        {
+          "claim": "水基灭火器喷射后无法隔绝水分与钠的接触，反而加剧反应。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅说\"严禁用水、泡沫或二氧化碳灭火器\"，未提及\"水基灭火器\"这一具体类别，也未分析其喷射后是否能隔绝水分，属于超出上下文的内容"
+        },
+        {
+          "claim": "应使用干燥的氯化钠粉末扑灭金属钠火灾。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确推荐\"干燥沙土、干燥石墨粉或D类专用灭火剂\"，未提及\"干燥的氯化钠粉末\"，且氯化钠与沙土、石墨粉不同"
+        },
+        {
+          "claim": "应使用干燥砂土扑灭金属钠火灾。",
+          "verdict": "supported",
+          "evidence": "应使用干燥沙土、干燥石墨粉或D类专用灭火剂"
+        },
+        {
+          "claim": "应使用专用D类金属火灾灭火器扑灭金属钠火灾。",
+          "verdict": "supported",
+          "evidence": "应使用干燥沙土、干燥石墨粉或D类专用灭火剂；库房应配备干燥沙土、D类灭火器等应急物资"
+        },
+        {
+          "claim": "具体现场处置还需结合火势规模与通风条件。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及火势规模、通风条件等因素对处置方案的影响"
+        },
+        {
+          "claim": "建议遵循应急预案与专业消防指导。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及\"应急预案\"或\"专业消防指导\"相关内容"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q014",
+      "question": "金属钠应该如何储存？",
+      "answer_text": "金属钠储存要点：\n\n- **隔绝空气与水分**：钠极易与氧气、水反应，须密封保存。\n- **浸没在惰性液体中**：通常存于煤油或液体石蜡中，液面需完全覆盖钠块。\n- **容器选择**：使用干燥、密封的玻璃或金属容器，避免使用含水或易反应材质。\n- **阴凉干燥处**：远离火源、热源和阳光直射，储存区应干燥通风。\n- **远离禁配物**：与酸、氧化剂、卤素、水等分开存放。\n- **少量分装**：大块钠宜分装，减少暴露面积；取用时用干燥工具。\n- **防火防爆**：储存区配备干砂、干燥氯化钠或专用灭火剂，严禁用水灭火。\n\n不确定点：具体是否用煤油还是石蜡、容器材质细节，可能因实验室/工业规范不同而有差异，建议遵循所在单位的安全规程。",
+      "claims": [
+        {
+          "claim": "钠极易与氧气反应",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及钠遇水剧烈反应，未提及与氧气反应"
+        },
+        {
+          "claim": "钠极易与水反应",
+          "verdict": "supported",
+          "evidence": "金属钠遇水发生剧烈反应，生成氢氧化钠并放出氢气，反应放热可使氢气自燃甚至爆炸"
+        },
+        {
+          "claim": "钠须密封保存",
+          "verdict": "supported",
+          "evidence": "金属钠必须浸没于煤油或液体石蜡中密封保存"
+        },
+        {
+          "claim": "钠通常存于煤油中",
+          "verdict": "supported",
+          "evidence": "金属钠必须浸没于煤油或液体石蜡中密封保存"
+        },
+        {
+          "claim": "钠通常存于液体石蜡中",
+          "verdict": "supported",
+          "evidence": "金属钠必须浸没于煤油或液体石蜡中密封保存"
+        },
+        {
+          "claim": "液面需完全覆盖钠块",
+          "verdict": "supported",
+          "evidence": "金属钠必须浸没于煤油或液体石蜡中密封保存"
+        },
+        {
+          "claim": "使用干燥的玻璃容器储存钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质为玻璃，仅要求密封保存"
+        },
+        {
+          "claim": "使用密封的玻璃容器储存钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质为玻璃，仅要求密封保存"
+        },
+        {
+          "claim": "使用干燥的金属容器储存钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质为金属，仅要求密封保存"
+        },
+        {
+          "claim": "使用密封的金属容器储存钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质为金属，仅要求密封保存"
+        },
+        {
+          "claim": "避免使用含水材质容器储存钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质要求，仅要求远离水源、潮湿环境"
+        },
+        {
+          "claim": "避免使用易反应材质容器储存钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及容器材质要求"
+        },
+        {
+          "claim": "钠应储存于阴凉处",
+          "verdict": "supported",
+          "evidence": "存放于阴凉、干燥、通风的库房"
+        },
+        {
+          "claim": "钠应储存于干燥处",
+          "verdict": "supported",
+          "evidence": "存放于阴凉、干燥、通风的库房，远离水源、酸类、氧化剂和潮湿环境"
+        },
+        {
+          "claim": "钠应远离火源储存",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确提及远离火源，仅提及远离水源、酸类、氧化剂和潮湿环境"
+        },
+        {
+          "claim": "钠应远离热源储存",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确提及远离热源，仅提及存放于阴凉库房"
+        },
+        {
+          "claim": "钠应远离阳光直射储存",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及阳光直射"
+        },
+        {
+          "claim": "钠储存区应干燥",
+          "verdict": "supported",
+          "evidence": "存放于阴凉、干燥、通风的库房，远离水源、酸类、氧化剂和潮湿环境"
+        },
+        {
+          "claim": "钠储存区应通风",
+          "verdict": "supported",
+          "evidence": "存放于阴凉、干燥、通风的库房"
+        },
+        {
+          "claim": "钠应与酸分开存放",
+          "verdict": "supported",
+          "evidence": "远离水源、酸类、氧化剂和潮湿环境"
+        },
+        {
+          "claim": "钠应与氧化剂分开存放",
+          "verdict": "supported",
+          "evidence": "远离水源、酸类、氧化剂和潮湿环境"
+        },
+        {
+          "claim": "钠应与卤素分开存放",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及卤素"
+        },
+        {
+          "claim": "钠应与水分开存放",
+          "verdict": "supported",
+          "evidence": "远离水源、酸类、氧化剂和潮湿环境"
+        },
+        {
+          "claim": "大块钠宜分装",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及分装或大块钠的处理"
+        },
+        {
+          "claim": "分装钠可减少暴露面积",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及分装或暴露面积"
+        },
+        {
+          "claim": "取用钠时用干燥工具",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及取用工具，仅提及泄漏应急处理时穿戴干燥手套"
+        },
+        {
+          "claim": "钠储存区应配备干砂",
+          "verdict": "supported",
+          "evidence": "库房应配备干燥沙土、D 类灭火器等应急物资"
+        },
+        {
+          "claim": "钠储存区应配备干燥氯化钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及配备干燥沙土，未提及干燥氯化钠"
+        },
+        {
+          "claim": "钠储存区应配备专用灭火剂",
+          "verdict": "supported",
+          "evidence": "库房应配备干燥沙土、D 类灭火器等应急物资；应使用干燥沙土、干燥石墨粉或 D 类专用灭火剂"
+        },
+        {
+          "claim": "钠储存区严禁用水灭火",
+          "verdict": "supported",
+          "evidence": "严禁用水、泡沫或二氧化碳灭火器处理金属钠泄漏或火灾——水与钠剧烈反应；储存区域禁止水管喷淋系统"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q015",
+      "question": "实验后残留的少量金属钠如何安全处理？",
+      "answer_text": "- **少量残留钠的安全处理步骤**：  \n  1. **隔离**：将残留钠置于干燥的沙盘或耐腐蚀容器中，远离水、酸、卤代烃等。  \n  2. **用惰性溶剂覆盖**：加入干燥的矿物油或甲苯覆盖，避免暴露于空气和湿气。  \n  3. **缓慢醇解**：在通风橱内，用**异丙醇**（比乙醇更温和）少量、分批滴加至钠上，直至无气泡产生；反应：Na + i-PrOH → NaOi-Pr + H₂↑。  \n  4. **中和与稀释**：醇解完成后，用大量水稀释，再用稀酸中和至中性。  \n  5. **废弃物处置**：按实验室危险废物分类收集，交由合规单位处理。  \n\n- **禁止事项**：  \n  - 不得直接丢入水、酸或垃圾桶；  \n  - 不得大量堆积或密闭存放；  \n  - 不得用卤代溶剂（如二氯甲烷）处理。  \n\n- **不确定点**：不同单位对醇解后废液的分类要求可能不同，建议按本实验室SOP及当地危废规定执行。",
+      "claims": [
+        {
+          "claim": "少量残留钠的安全处理步骤包括隔离，将残留钠置于干燥的沙盘或耐腐蚀容器中，远离水、酸、卤代烃等。",
+          "verdict": "unsupported",
+          "evidence": "上下文提到小量泄漏用干燥沙土覆盖吸附、收集于干燥容器中，但未提及'隔离'步骤，也未提及'卤代烃'。废弃处置部分说的是用无水叔丁醇淬灭，不是置于沙盘。"
+        },
+        {
+          "claim": "少量残留钠的安全处理步骤包括用惰性溶剂覆盖，加入干燥的矿物油或甲苯覆盖，避免暴露于空气和湿气。",
+          "verdict": "unsupported",
+          "evidence": "上下文要求金属钠浸没于煤油或液体石蜡中密封保存，但这是储存要求，不是残留钠的废弃处置步骤。废弃处置明确要求用无水叔丁醇淬灭，未提及用矿物油或甲苯覆盖残留钠。"
+        },
+        {
+          "claim": "少量残留钠的安全处理步骤包括缓慢醇解，在通风橱内，用异丙醇（比乙醇更温和）少量、分批滴加至钠上，直至无气泡产生。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确使用无水叔丁醇淬灭，而非异丙醇。原文：'少量残留金属钠须在通风橱内、无水条件下，用无水叔丁醇缓慢滴加淬灭'。"
+        },
+        {
+          "claim": "异丙醇比乙醇更温和。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及异丙醇与乙醇的相对温和性比较。"
+        },
+        {
+          "claim": "钠与异丙醇的反应为：Na + i-PrOH → NaOi-Pr + H₂↑。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及异丙醇与钠的反应方程式。"
+        },
+        {
+          "claim": "少量残留钠的安全处理步骤包括中和与稀释，醇解完成后，用大量水稀释，再用稀酸中和至中性。",
+          "verdict": "unsupported",
+          "evidence": "上下文废弃处置步骤为'待钠完全溶解后，所得溶液用水大量稀释，按无机废液处理'，未提及'用稀酸中和至中性'的步骤。"
+        },
+        {
+          "claim": "少量残留钠的安全处理步骤包括废弃物处置，按实验室危险废物分类收集，交由合规单位处理。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'量大时移交有资质的危废处置单位，不得自行处理'，对于少量残留说的是'按无机废液处理'，未提及'按实验室危险废物分类收集'。"
+        },
+        {
+          "claim": "禁止将残留钠直接丢入水、酸或垃圾桶。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确禁止用水处理（'严禁用水'），但未提及禁止丢入'酸'或'垃圾桶'的具体表述。"
+        },
+        {
+          "claim": "禁止将残留钠大量堆积或密闭存放。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及禁止大量堆积或密闭存放残留钠。"
+        },
+        {
+          "claim": "禁止用卤代溶剂（如二氯甲烷）处理残留钠。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及禁止用卤代溶剂或二氯甲烷处理残留钠。"
+        },
+        {
+          "claim": "不同单位对醇解后废液的分类要求可能不同。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及不同单位对废液分类要求的差异。"
+        },
+        {
+          "claim": "建议按本实验室SOP及当地危废规定执行醇解后废液的处置。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'本实验室SOP'或'当地危废规定'的相关建议。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q016",
+      "question": "金属钠遇水会发生什么反应？",
+      "answer_text": "金属钠遇水会发生剧烈反应，要点如下：\n\n- **反应方程式**：2Na + 2H₂O → 2NaOH + H₂↑\n- **现象**：钠浮在水面上（密度小于水）、熔化成小球（反应放热、钠熔点低）、四处游动、发出嘶嘶声，有时可能燃烧。\n- **反应类型**：置换反应，属于剧烈的氧化还原反应。\n- **危险性**：放出氢气并大量放热，氢气可能被点燃甚至爆炸；生成的NaOH具强腐蚀性。量大时可能发生爆炸。\n- **安全提示**：金属钠须保存在煤油中，严禁接触水；着火时不能用含水灭火剂，一般用干燥沙土或专用灭火剂覆盖。\n\n不确定之处：具体现象（如是否燃烧、爆炸）与钠的用量、水温、容器条件有关，上述为一般情况下的描述。",
+      "claims": [
+        {
+          "claim": "金属钠遇水会发生剧烈反应",
+          "verdict": "supported",
+          "evidence": "金属钠遇水发生剧烈反应"
+        },
+        {
+          "claim": "反应方程式：2Na + 2H₂O → 2NaOH + H₂↑",
+          "verdict": "supported",
+          "evidence": "生成氢氧化钠并放出氢气"
+        },
+        {
+          "claim": "钠浮在水面上",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及钠的浮沉现象"
+        },
+        {
+          "claim": "钠的密度小于水",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及钠的密度数据"
+        },
+        {
+          "claim": "钠熔化成小球",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及钠熔化形态"
+        },
+        {
+          "claim": "反应放热",
+          "verdict": "supported",
+          "evidence": "反应放热可使氢气自燃甚至爆炸"
+        },
+        {
+          "claim": "钠熔点低",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及钠的熔点数据"
+        },
+        {
+          "claim": "钠四处游动",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及钠的运动现象"
+        },
+        {
+          "claim": "钠发出嘶嘶声",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及声音现象"
+        },
+        {
+          "claim": "钠有时可能燃烧",
+          "verdict": "supported",
+          "evidence": "反应放热可使氢气自燃甚至爆炸"
+        },
+        {
+          "claim": "反应类型为置换反应",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未对反应进行类型分类"
+        },
+        {
+          "claim": "反应属于剧烈的氧化还原反应",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未使用\"氧化还原反应\"术语"
+        },
+        {
+          "claim": "反应放出氢气",
+          "verdict": "supported",
+          "evidence": "放出氢气"
+        },
+        {
+          "claim": "反应大量放热",
+          "verdict": "supported",
+          "evidence": "反应放热可使氢气自燃甚至爆炸"
+        },
+        {
+          "claim": "氢气可能被点燃",
+          "verdict": "supported",
+          "evidence": "可使氢气自燃"
+        },
+        {
+          "claim": "氢气可能爆炸",
+          "verdict": "supported",
+          "evidence": "甚至爆炸"
+        },
+        {
+          "claim": "生成的NaOH具强腐蚀性",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及NaOH的腐蚀性"
+        },
+        {
+          "claim": "量大时可能发生爆炸",
+          "verdict": "supported",
+          "evidence": "甚至爆炸"
+        },
+        {
+          "claim": "金属钠须保存在煤油中",
+          "verdict": "supported",
+          "evidence": "金属钠必须浸没于煤油或液体石蜡中密封保存"
+        },
+        {
+          "claim": "金属钠严禁接触水",
+          "verdict": "supported",
+          "evidence": "远离水源、酸类、氧化剂和潮湿环境；严禁用水"
+        },
+        {
+          "claim": "金属钠着火时不能用含水灭火剂",
+          "verdict": "supported",
+          "evidence": "严禁用水、泡沫或二氧化碳灭火器处理金属钠泄漏或火灾——水与钠剧烈反应"
+        },
+        {
+          "claim": "金属钠着火时一般用干燥沙土覆盖",
+          "verdict": "supported",
+          "evidence": "应使用干燥沙土、干燥石墨粉或 D 类专用灭火剂；小量泄漏：用干燥沙土覆盖吸附"
+        },
+        {
+          "claim": "金属钠着火时一般用专用灭火剂覆盖",
+          "verdict": "supported",
+          "evidence": "应使用干燥沙土、干燥石墨粉或 D 类专用灭火剂"
+        },
+        {
+          "claim": "具体现象与钠的用量有关",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未讨论用量对现象的影响"
+        },
+        {
+          "claim": "具体现象与水温有关",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未讨论水温对现象的影响"
+        },
+        {
+          "claim": "具体现象与容器条件有关",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未讨论容器条件对现象的影响"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q017",
+      "question": "专利实施例 1 中加氢反应的温度和氢气压力分别是多少？",
+      "answer_text": "无法回答。原因：你没有提供该专利的具体文本或专利号，我无法获取“实施例 1”的内容，因此不能确定其加氢反应的温度和氢气压力。请补充专利号或实施例原文。",
+      "claims": [],
+      "status": "ok"
+    },
+    {
+      "id": "q018",
+      "question": "专利实施例 1 的甲苯加氢收率是多少？",
+      "answer_text": "无法确定。原因：您未提供具体专利（公开号/申请号）及实施例1的原文内容，我无法检索或核对其中甲苯加氢的收率数据。请补充专利号或实施例原文，我再据此回答。",
+      "claims": [
+        {
+          "claim": "无法确定。原因：您未提供具体专利（公开号/申请号）及实施例1的原文内容，我无法检索或核对其中甲苯加氢的收率数据。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确提供了专利03-PATENT-CN2023102567-镍催化加氢的完整信息，包括申请号CN202310256789.4、公开号CN115678432A，且实施例1明确记载\"甲苯转化率99.2%，甲基环己烷选择性99.1%，收率92.3%\"，该断言声称无法确定且未提供具体专利，与上下文矛盾"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q019",
+      "question": "专利实施例 2 把温度升到 180 ℃ 后收率是多少？",
+      "answer_text": "抱歉，我无法回答这个问题。原因：我没有该专利的原文或具体信息（不知道是哪件专利、其实施例 2 的反应体系和收率数据），因此不能确定 180 ℃ 后的收率。请提供专利号或实施例 2 的原文内容。",
+      "claims": [
+        {
+          "claim": "我无法回答这个问题。",
+          "verdict": "unsupported",
+          "evidence": "上下文包含完整信息，能够回答关于专利CN2023102567实施例2的相关问题"
+        },
+        {
+          "claim": "我没有该专利的原文或具体信息。",
+          "verdict": "unsupported",
+          "evidence": "上下文中[03-PATENT-CN2023102567-镍催化加氢-c001]至[03-PATENT-CN2023102567-镍催化加氢-c008]完整提供了该专利的原文及具体信息"
+        },
+        {
+          "claim": "我不知道是哪件专利。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确定位了专利为申请号CN202310256789.4、公开号CN115678432A的'一种以负载型镍催化剂催化芳烃加氢制备环己烷类化合物的方法'"
+        },
+        {
+          "claim": "我不知道其实施例 2 的反应体系。",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确记载：'在与实施例1相同的投料和压力下，将反应温度提高至180℃，其余条件不变'，实施例1体系为甲苯100mmol、正己烷200mL、Ni/Al2O3催化剂（Ni负载量10wt%，用量为底物质量的5%），氮气置换后通入氢气至2.5MPa"
+        },
+        {
+          "claim": "我不知道其实施例 2 的收率数据。",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确记载实施例2'收率降至77.8%，选择性降至91.5%'"
+        },
+        {
+          "claim": "我不能确定 180 ℃ 后的收率。",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确记载180℃时收率为77.8%，且未提及180℃之后的任何温度点数据，但断言说的是'180℃后的收率'无法确定，而实际上180℃时的收率是明确已知的77.8%，该断言表述模糊；若理解为180℃时的收率，则上下文明确支持为77.8%，断言错误"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q020",
+      "question": "专利中分析 180 ℃ 时收率下降的原因是什么？",
+      "answer_text": "无法确定该专利具体如何分析 180 ℃ 收率下降的原因，因为问题未提供专利号、反应体系或原文表述。以下是一般性可能原因，供参考：\n\n- **副反应加剧**：高温下竞争性副反应速率上升，选择性下降，目标产物收率降低。\n- **催化剂失活**：活性组分烧结、积碳或结构破坏，导致催化效率下降。\n- **产物/中间体分解**：目标产物或关键中间体在 180 ℃ 发生热分解或聚合。\n- **传热/传质限制**：高温下放热加剧，局部过热或混合不均，引发失控副反应。\n- **热力学平衡限制**：反应为可逆放热反应时，升温不利于平衡转化率。\n- **溶剂/助剂挥发或降解**：体系组成变化影响反应路径。\n\n建议提供专利号或相关段落，以便准确回答。",
+      "claims": [
+        {
+          "claim": "无法确定该专利具体如何分析 180 ℃ 收率下降的原因，因为问题未提供专利号、反应体系或原文表述。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确提供了专利号CN202310256789.4（公开号CN115678432A），且03-PATENT-CN2023102567-镍催化加氢-c005明确记载了180℃收率下降的原因分析：'温度过高导致镍晶粒烧结长大、活性位数量减少；同时高温下发生甲基环己烷脱氢芳构化及少量C-C键裂解等副反应'"
+        },
+        {
+          "claim": "高温下竞争性副反应速率上升，选择性下降，目标产物收率降低。",
+          "verdict": "supported",
+          "evidence": "03-PATENT-CN2023102567-镍催化加氢-c005：'高温下发生甲基环己烷脱氢芳构化及少量C-C键裂解等副反应，二者共同造成收率显著下降'；04-REPORT-2023-036-2-甲基环己酮工艺优化-c006：'温度超过170℃后选择性明显下降，副反应加剧'"
+        },
+        {
+          "claim": "催化剂活性组分烧结、积碳或结构破坏，导致催化效率下降。",
+          "verdict": "supported",
+          "evidence": "03-PATENT-CN2023102567-镍催化加氢-c005：'温度过高导致镍晶粒烧结长大、活性位数量减少'；05-REVIEW-多相加氢催化剂进展-c004：'镍基催化剂失活主因包括硫/氯中毒、高温烧结和积碳'"
+        },
+        {
+          "claim": "目标产物或关键中间体在 180 ℃ 发生热分解或聚合。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及的副反应为'甲基环己烷脱氢芳构化及少量C-C键裂解'（03-PATENT-CN2023102567-镍催化加氢-c005）和'副反应加剧'（04-REPORT-2023-036-2-甲基环己酮工艺优化-c006），未提及目标产物或中间体的热分解或聚合"
+        },
+        {
+          "claim": "高温下放热加剧，局部过热或混合不均，引发失控副反应。",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及放热加剧、局部过热、混合不均或失控副反应等内容"
+        },
+        {
+          "claim": "反应为可逆放热反应时，升温不利于平衡转化率。",
+          "verdict": "unsupported",
+          "evidence": "上下文未讨论反应的热力学可逆性或平衡转化率问题，专利中180℃时转化率仍高（实施例2未给出转化率，但实施例1为99.2%，且04-REPORT-2023-036-2-甲基环己酮工艺优化-c006中170℃转化率99%），收率下降主因是选择性降低而非平衡限制"
+        },
+        {
+          "claim": "溶剂/助剂挥发或降解，体系组成变化影响反应路径。",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及溶剂或助剂的挥发、降解或体系组成变化等内容"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q021",
+      "question": "对比例 1 用 Pd/C 做催化剂的收率是多少？",
+      "answer_text": "无法确定。\n\n原因：问题中未提供“对比例 1”的具体反应条件、底物、Pd/C 用量、温度、时间及收率数据来源（如某篇文献或专利），仅凭“对比例 1 + Pd/C”无法定位到唯一实验，因此不能给出收率数值。请补充文献/专利名称、反应类型或原文段落。",
+      "claims": [
+        {
+          "claim": "无法确定对比例 1 使用 Pd/C 的收率数值。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载：'以 5% Pd/C 替换 Ni/Al2O3，其余条件同实施例 1（140 ℃、2.5 MPa、6 h），收率 88.4%'"
+        },
+        {
+          "claim": "问题中未提供对比例 1 的具体反应条件。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载：'其余条件同实施例 1（140 ℃、2.5 MPa、6 h）'"
+        },
+        {
+          "claim": "问题中未提供对比例 1 的底物信息。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载对比例 1 是替换实施例 1 的催化剂，实施例 1 底物为'甲苯 100 mmol'"
+        },
+        {
+          "claim": "问题中未提供对比例 1 的 Pd/C 用量。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载：'以 5% Pd/C 替换 Ni/Al2O3，其余条件同实施例 1'，实施例 1 催化剂用量为'底物质量的 5%'"
+        },
+        {
+          "claim": "问题中未提供对比例 1 的反应温度。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载：'其余条件同实施例 1（140 ℃、2.5 MPa、6 h）'"
+        },
+        {
+          "claim": "问题中未提供对比例 1 的反应时间。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载：'其余条件同实施例 1（140 ℃、2.5 MPa、6 h）'"
+        },
+        {
+          "claim": "问题中未提供对比例 1 的收率数据来源（如某篇文献或专利）。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载来源：'03-PATENT-CN2023102567-镍催化加氢/对比例 1'，文档类型为专利"
+        },
+        {
+          "claim": "仅凭对比例 1 + Pd/C 无法定位到唯一实验。",
+          "verdict": "unsupported",
+          "evidence": "上下文中对比例 1 明确唯一，位于专利 03-PATENT-CN2023102567 中，且明确标注'对比例 1'"
+        },
+        {
+          "claim": "不能给出收率数值。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载收率 88.4%"
+        },
+        {
+          "claim": "请补充文献/专利名称。",
+          "verdict": "unsupported",
+          "evidence": "上下文已明确提供专利名称/编号：CN2023102567（申请号 CN202310256789.4，公开号 CN115678432A）"
+        },
+        {
+          "claim": "请补充反应类型。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确记载为'芳烃加氢制备环己烷类化合物'，具体为甲苯加氢制甲基环己烷"
+        },
+        {
+          "claim": "请补充原文段落。",
+          "verdict": "unsupported",
+          "evidence": "上下文已完整提供对比例 1 原文：'[03-PATENT-CN2023102567-镍催化加氢-c006] 来源:03-PATENT-CN2023102567-镍催化加氢/对比例 1 以 5% Pd/C 替换 Ni/Al2O3，其余条件同实施例 1（140 ℃、2.5 MPa、6 h），收率 88.4%。Pd/C 单位质量活性虽高，但钯价格约为镍的 6 倍，且对原料中痕量硫化物敏感、易毒化失活，综合成本明显高于本发明方案。'"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q022",
+      "question": "该专利使用的催化剂是什么？镍的负载量多少？",
+      "answer_text": "不确定。原因：你没有提供专利号或专利全文，我无法定位“该专利”具体指哪一件，因此无法确认其使用的催化剂及镍负载量。请补充专利公开号/申请号或相关段落，我再据此回答。",
+      "claims": [
+        {
+          "claim": "不确定。原因：你没有提供专利号或专利全文，我无法定位\"该专利\"具体指哪一件，因此无法确认其使用的催化剂及镍负载量。请补充专利公开号/申请号或相关段落，我再据此回答。",
+          "verdict": "unsupported",
+          "evidence": "上下文中明确提供了专利信息：来源:03-PATENT-CN2023102567-镍催化加氢，申请号CN202310256789.4，公开号CN115678432A，该专利明确记载了使用Ni/Al2O3催化剂，Ni负载量10 wt%（见03-PATENT-CN2023102567-镍催化加氢-c004）。该断言声称无法定位专利、无法确认催化剂及镍负载量，与上下文明确提供的信息直接矛盾。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q023",
+      "question": "实验报告得出的 2-甲基环己酮合成最佳反应温度是多少？",
+      "answer_text": "无法确定。原因：未提供该实验报告的具体内容，问题中也没有给出任何温度数据或实验条件，因此不能推断“最佳反应温度”是多少。请补充报告中的温度考察范围与结果（如收率/选择性随温度变化的数据），我才能据此回答。",
+      "claims": [
+        {
+          "claim": "无法确定最佳反应温度。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]明确给出最佳反应温度为155℃，收率93%，选择性96%"
+        },
+        {
+          "claim": "未提供该实验报告的具体内容。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c001]至[c006]提供了完整的实验报告，包括目的、条件、记录、异常记录、结论建议及数据表格"
+        },
+        {
+          "claim": "问题中未给出任何温度数据。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]表格明确列出温度数据：120℃、140℃、155℃、170℃，以及异常记录中的175℃"
+        },
+        {
+          "claim": "问题中未给出实验条件。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c003]详细列出实验条件：催化剂Ni/Al2O3（Ni负载量10 wt%，用量为底物质量的5%）、溶剂异丙醇、氢气压力2.5 MPa、反应时间6 h"
+        },
+        {
+          "claim": "不能推断最佳反应温度是多少。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]明确结论：综合收率与选择性，最佳反应温度为155℃"
+        },
+        {
+          "claim": "需要补充报告中的温度考察范围与结果。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]已完整提供温度考察范围（120-170℃）及对应转化率、选择性、收率结果"
+        },
+        {
+          "claim": "需要补充收率随温度变化的数据。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]表格已提供收率数据：120℃时78%、140℃时88%、155℃时93%、170℃时87%"
+        },
+        {
+          "claim": "需要补充选择性随温度变化的数据。",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]表格已提供选择性数据：120℃时95%、140℃时94%、155℃时96%、170℃时88%，以及175℃异常时85%"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q024",
+      "question": "155 ℃ 时 2-甲基环己酮的收率和选择性分别是多少？",
+      "answer_text": "不确定。原因：问题缺少反应体系信息（原料、催化剂、氧化剂/氢源、溶剂、压力、停留时间等），无法确定“155 ℃”对应的具体工艺，因此无法给出2-甲基环己酮的收率和选择性数值。请补充具体反应路线与条件，或提供文献/专利出处。",
+      "claims": [
+        {
+          "claim": "问题缺少反应体系信息（原料、催化剂、氧化剂/氢源、溶剂、压力、停留时间等）",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c002]至[c003]明确记载了原料为2-甲酚、催化剂为Ni/Al2O3、氢气压力2.5 MPa、溶剂为异丙醇、反应时间6 h，信息完整，不存在缺少"
+        },
+        {
+          "claim": "无法确定“155 ℃”对应的具体工艺",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]明确记载155 ℃对应2-甲酚为原料、Ni/Al2O3催化加氢制备2-甲基环己酮的工艺，且表格中批次3温度为155 ℃"
+        },
+        {
+          "claim": "无法给出2-甲基环己酮的收率数值",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]表格明确记载批次3（155 ℃）收率为93%，批次2（140 ℃）收率为88%，批次4（170 ℃）收率为87%，批次1（120 ℃）收率为78%"
+        },
+        {
+          "claim": "无法给出2-甲基环己酮的选择性数值",
+          "verdict": "unsupported",
+          "evidence": "上下文[04-REPORT-2023-036-2-甲基环己酮工艺优化-c006]表格明确记载批次3（155 ℃）选择性为96%，批次2（140 ℃）选择性为94%，批次4（170 ℃）选择性为88%，批次1（120 ℃）选择性为95%，另异常记录中175 ℃时选择性降至85%"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q025",
+      "question": "温度升到 170 ℃ 后，2-甲基环己酮工艺主要出现什么问题？",
+      "answer_text": "不确定。没有给出具体工艺路线（催化剂、氧化剂/原料、溶剂、压力、停留时间等），无法判断170 ℃下的主要问题。一般可能涉及：\n\n- **放热失控风险**：高温下氧化/反应放热加剧，冷却能力不足时易飞温。\n- **选择性下降**：副反应（过度氧化、异构化、缩合/聚合）增多，目标产物收率降低。\n- **催化剂失活**：高温导致活性组分烧结、积碳或分解。\n- **物料分解/结焦**：2-甲基环己酮或中间体热稳定性不足，产生焦油、堵塞。\n- **安全与设备问题**：接近或超过溶剂/反应物闪点、自燃点，密封与材质耐温受限。\n\n建议补充具体工艺条件后再判断“主要问题”。",
+      "claims": [
+        {
+          "claim": "不确定。没有给出具体工艺路线（催化剂、氧化剂/原料、溶剂、压力、停留时间等），无法判断170 ℃下的主要问题。",
+          "verdict": "unsupported",
+          "evidence": "上下文中明确给出了多条与170℃相关的具体工艺信息：04-REPORT-2023-036中明确记载了Ni/Al2O3催化剂、2-甲酚原料、异丙醇溶剂、2.5 MPa氢气压力、6 h反应时间，以及170℃下的具体数据（转化率99%、选择性88%、收率87%）；03-PATENT-CN2023102567中也记载了Ni/Al2O3催化剂、甲苯原料、正己烷溶剂、2.5 MPa、6 h等条件。断言称'没有给出具体工艺路线'与上下文矛盾。"
+        },
+        {
+          "claim": "高温下氧化/反应放热加剧，冷却能力不足时易飞温。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中未提及'氧化反应''放热加剧''冷却能力不足''飞温'等相关内容。涉及的加氢反应为催化加氢，非氧化反应；也未讨论反应热效应或冷却系统问题。"
+        },
+        {
+          "claim": "高温下副反应（过度氧化、异构化、缩合/聚合）增多，目标产物收率降低。",
+          "verdict": "unsupported",
+          "evidence": "上下文中确实提到高温下副反应增多导致收率降低（如04-REPORT-2023-036中170℃选择性降至88%、收率降至87%；03-PATENT-CN2023102567中180℃收率降至77.8%），但所述副反应为'脱氢芳构化''C-C键裂解'（专利）或'副反应加剧'（报告），未提及'过度氧化、异构化、缩合/聚合'等具体副反应类型。断言中的副反应类型与上下文记载不符。"
+        },
+        {
+          "claim": "高温导致催化剂活性组分烧结、积碳或分解。",
+          "verdict": "supported",
+          "evidence": "03-PATENT-CN2023102567-镍催化加氢-c005：'温度过高导致镍晶粒烧结长大、活性位数量减少'；05-REVIEW-多相加氢催化剂进展-c003：'超过170℃后晶粒烧结与副反应风险显著上升'；05-REVIEW-多相加氢催化剂进展-c004：'镍基催化剂失活主因包括硫/氯中毒、高温烧结和积碳'。"
+        },
+        {
+          "claim": "2-甲基环己酮或中间体在170 ℃下热稳定性不足，产生焦油、堵塞。",
+          "verdict": "unsupported",
+          "evidence": "04-REPORT-2023-036-2-甲基环己酮工艺优化-c005记载批次7温度升至约175℃时'产品气味异常（疑似副产物增多）'，但未提及'焦油''堵塞'或'2-甲基环己酮或中间体热稳定性不足'的表述。断言内容超出上下文。"
+        },
+        {
+          "claim": "170 ℃接近或超过溶剂/反应物闪点、自燃点，存在安全与设备问题。",
+          "verdict": "unsupported",
+          "evidence": "06-TABLE-常用有机溶剂物性与干燥-c001记载异丙醇沸点78.2℃、甲苯沸点110.6℃、正己烷沸点68.7℃，但未提供闪点或自燃点数据；上下文中未将170℃与溶剂闪点/自燃点进行关联比较，也未提及由此产生的安全与设备问题。04-REPORT中建议放大时温控联锁报警值设为165℃，但未说明是基于闪点/自燃点考虑。"
+        },
+        {
+          "claim": "170 ℃下密封与材质耐温受限。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中未提及任何关于设备密封性能、材质耐温极限或相关限制的内容。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q026",
+      "question": "批次 7 发生了什么异常，结果如何？",
+      "answer_text": "我不确定你指的是哪一批次数据或哪份记录中的“批次 7”，因此无法准确回答“发生了什么异常、结果如何”。\n\n请补充以下任一信息，我才能给出简洁、分点的结论：\n1. 所属产品/工艺/项目名称；  \n2. 批次记录来源（如实验记录、生产批记录、LIMS/MES 系统、报告编号）；  \n3. 异常类型线索（如收率、纯度、温度、压力、粒径、粘度、颜色、杂质等）。",
+      "claims": [
+        {
+          "claim": "我不确定你指的是哪一批次数据或哪份记录中的\"批次 7\"，因此无法准确回答\"发生了什么异常、结果如何\"。",
+          "verdict": "unsupported",
+          "evidence": "上下文中明确存在[04-REPORT-2023-036-2-甲基环己酮工艺优化-c005]提及\"批次 7 因温控阀故障，实际温度一度升至约 175 ℃，该批选择性降至85%，产品气味异常（疑似副产物增多），已按偏差流程处理，该批物料不入库\"，并非无法确定"
+        },
+        {
+          "claim": "请补充所属产品/工艺/项目名称。",
+          "verdict": "unsupported",
+          "evidence": "上下文中已明确提及\"2-甲基环己酮合成工艺温度优化\"项目及\"2-甲基环己酮\"产品，信息已足够"
+        },
+        {
+          "claim": "请补充批次记录来源（如实验记录、生产批记录、LIMS/MES 系统、报告编号）。",
+          "verdict": "unsupported",
+          "evidence": "上下文中已明确来源为[04-REPORT-2023-036-2-甲基环己酮工艺优化]，编号RPT-2023-036，文档类型为内部实验报告"
+        },
+        {
+          "claim": "请补充异常类型线索（如收率、纯度、温度、压力、粒径、粘度、颜色、杂质等）。",
+          "verdict": "unsupported",
+          "evidence": "上下文中已明确异常类型为温度异常（升至约175℃），结果包括选择性降至85%、产品气味异常、疑似副产物增多，无需补充线索"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q027",
+      "question": "按综述的建议，大宗芳烃饱和加氢首选哪类催化剂？",
+      "answer_text": "不确定您所指的具体综述文献，因此无法准确对应“该综述的建议”。就大宗芳烃饱和加氢的通用工业与文献共识而言，通常首选：\n\n- **负载型贵金属催化剂**：如 Pd、Pt 负载于 Al₂O₃、SiO₂ 或分子筛载体，低温活性高、芳烃饱和能力强，适用于深度加氢。\n- **镍基催化剂**：如 Ni/Al₂O₃、Raney Ni，成本较低，适用于对硫含量控制较好或预精制后的原料。\n- **抗硫型贵金属/双金属催化剂**：在原料含微量硫时，常选 Pd-Pt 等双金属体系以提高耐硫性。\n\n若您能提供综述名称或作者，我可以帮您核对其中具体推荐。",
+      "claims": [
+        {
+          "claim": "通常首选负载型贵金属催化剂，如 Pd、Pt 负载于 Al₂O₃、SiO₂ 或分子筛载体，低温活性高、芳烃饱和能力强，适用于深度加氢。",
+          "verdict": "unsupported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c003]明确指出'大宗芳烃饱和加氢（如甲苯制甲基环己烷）：首选 Ni 系催化剂，以成本为导向；对选择性要求苛刻的高附加值产物可考虑 Ru/Al₂O₃'，与断言中'首选负载型贵金属催化剂'矛盾。上下文[03-PATENT-CN2023102567-镍催化加氢-c006]也指出Pd/C虽活性高但成本高、易毒化，综合成本明显高于Ni/Al₂O₃方案。"
+        },
+        {
+          "claim": "通常首选镍基催化剂，如 Ni/Al₂O₃、Raney Ni，成本较低，适用于对硫含量控制较好或预精制后的原料。",
+          "verdict": "supported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c003]：'大宗芳烃饱和加氢（如甲苯制甲基环己烷）：首选 Ni 系催化剂，以成本为导向'；[05-REVIEW-多相加氢催化剂进展-c002]：'Ni/Al₂O3 廉价易得、稳定性好、可多次再生'；[03-PATENT-CN2023102567-镍催化加氢-c003]：'开发廉价、稳定的镍基催化剂具有显著的工业化价值'；[03-PATENT-CN2023102567-镍催化加氢-c006]：'钯价格约为镍的6倍'。关于硫含量控制，上下文[05-REVIEW-多相加氢催化剂进展-c002]指出Pd/C'易被硫化物毒化'，[05-REVIEW-多相加氢催化剂进展-c004]指出镍基催化剂失活主因包括'硫/氯中毒'，暗示镍基催化剂也需控制硫含量。"
+        },
+        {
+          "claim": "在原料含微量硫时，常选 Pd-Pt 等双金属体系以提高耐硫性。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Pd-Pt双金属体系，也未讨论任何催化剂在含微量硫条件下的耐硫性改进方案。上下文仅提到Pd/C'易被硫化物毒化'、镍基催化剂'硫/氯中毒'是失活主因，但未涉及如何通过双金属体系提高耐硫性。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q028",
+      "question": "底物含有羰基、苄基等官能团需要温和加氢条件时，综述推荐什么催化剂？",
+      "answer_text": "- **推荐催化剂类型**：综述通常推荐**负载型贵金属催化剂**，尤其是**Pd/C（钯碳）**，因其活性温和、选择性好，适合羰基、苄基共存时进行温和加氢（如苄基脱保护或选择性还原）。\n- **替代/补充选择**：若需更高选择性或避免过度还原，可考虑**Pd(OH)₂/C（Pearlman催化剂）**、**Pt/C**或**Ru/C**，以及**修饰型Pd催化剂**（如加吡啶、硫等毒化剂）来抑制羰基加氢。\n- **条件控制要点**：温和条件通常指**低压（1–5 bar H₂）**、**室温至50°C**、**适当溶剂（醇/乙酸乙酯）**，并避免强酸/强碱。\n- **不确定说明**：具体“综述推荐”因综述主题（如选择性加氢、脱苄基、羰基耐受）不同而异；若您能提供综述名称或目标反应（如只脱苄基保留羰基），可给出更精确的催化剂建议。",
+      "claims": [
+        {
+          "claim": "综述通常推荐负载型贵金属催化剂，尤其是Pd/C（钯碳）",
+          "verdict": "unsupported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c003]明确指出'大宗芳烃饱和加氢（如甲苯制甲基环己烷）：首选 Ni 系催化剂，以成本为导向；对选择性要求苛刻的高附加值产物可考虑 Ru/Al2O3'，并未'通常推荐'Pd/C，且Ni系才是首选"
+        },
+        {
+          "claim": "Pd/C（钯碳）因其活性温和、选择性好",
+          "verdict": "unsupported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c002]描述Pd/C优点为'活性高、条件温和、官能团耐受性好'，但并未说'选择性好'；实际上[05-REVIEW-多相加氢催化剂进展-c003]指出对选择性要求苛刻时考虑的是Ru/Al2O3而非Pd/C"
+        },
+        {
+          "claim": "Pd/C（钯碳）适合羰基、苄基共存时进行温和加氢",
+          "verdict": "supported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c003]：'含羰基、苄基等官能团的底物需要温和条件时，Pd/C 更合适'"
+        },
+        {
+          "claim": "Pd/C（钯碳）可用于苄基脱保护或选择性还原",
+          "verdict": "supported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c002]中Pd/C适用反应包括'脱苄基'，即苄基脱保护；且[05-REVIEW-多相加氢催化剂进展-c003]指出含苄基底物需要温和条件时Pd/C更合适"
+        },
+        {
+          "claim": "若需更高选择性或避免过度还原，可考虑Pd(OH)₂/C（Pearlman催化剂）",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及Pd(OH)₂/C或Pearlman催化剂"
+        },
+        {
+          "claim": "若需更高选择性或避免过度还原，可考虑Pt/C",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及Pt/Al2O3但未提及Pt/C；且[05-REVIEW-多相加氢催化剂进展-c003]指出对选择性要求苛刻时考虑的是Ru/Al2O3而非Pt基催化剂"
+        },
+        {
+          "claim": "若需更高选择性或避免过度还原，可考虑Ru/C",
+          "verdict": "unsupported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c002][05-REVIEW-多相加氢催化剂进展-c003]提及的是Ru/Al2O3而非Ru/C；载体不同（Al2O3 vs C），且明确写的是'Ru/Al2O3'"
+        },
+        {
+          "claim": "若需更高选择性或避免过度还原，可考虑修饰型Pd催化剂（如加吡啶、硫等毒化剂）来抑制羰基加氢",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及修饰型Pd催化剂、吡啶、硫等毒化剂或抑制羰基加氢的具体策略"
+        },
+        {
+          "claim": "温和条件通常指低压（1–5 bar H₂）",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未对'温和条件'的氢气压力范围给出明确定义；专利中Pd/C对比实验使用2.5 MPa（25 bar），Ni/Al2O3也使用2.0-3.0 MPa，均高于1-5 bar"
+        },
+        {
+          "claim": "温和条件通常指室温至50°C",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未对'温和条件'的温度范围给出明确定义；专利中反应温度为130-150°C或140°C，实验报告中为120-175°C，均高于室温至50°C范围"
+        },
+        {
+          "claim": "温和条件通常指适当溶剂（醇/乙酸乙酯）",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'温和条件'与溶剂类型的关联；专利使用正己烷，实验报告使用异丙醇，未将醇/乙酸乙酯定义为温和条件的特征"
+        },
+        {
+          "claim": "温和条件需避免强酸/强碱",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及温和条件与强酸/强碱的关系"
+        },
+        {
+          "claim": "具体'综述推荐'因综述主题（如选择性加氢、脱苄基、羰基耐受）不同而异",
+          "verdict": "supported",
+          "evidence": "上下文[05-REVIEW-多相加氢催化剂进展-c003]显示综述根据不同反应类型给出不同推荐：大宗芳烃饱和加氢首选Ni系，含羰基/苄基底物用Pd/C，高附加值选择性产物考虑Ru/Al2O3，说明推荐因主题/需求而异"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q029",
+      "question": "Ru/Al2O3 催化剂的主要缺点是什么？",
+      "answer_text": "Ru/Al₂O₃ 催化剂的主要缺点：\n\n1. **活性组分易烧结/迁移**：Ru 纳米颗粒在高温或长期运行中易聚集长大，导致活性下降；Al₂O₃ 表面羟基会促进 Ru 迁移。\n2. **载体酸性问题**：γ-Al₂O₃ 表面存在 Lewis 酸位，易引发副反应（如积碳、异构化），并可能促进结焦失活。\n3. **积碳失活**：在烃类重整、CO₂ 重整等反应中易积碳覆盖活性位。\n4. **抗中毒能力有限**：对 S、Cl 等杂质敏感，易中毒；Ru 成本较高。\n5. **水热稳定性不足**：高温水汽条件下 Al₂O₃ 易发生相变（γ→θ→α），比表面积下降，导致 Ru 分散度降低。\n6. **Ru 分散度控制难**：常规浸渍法难以获得高分散小粒径 Ru，且 Ru 与 Al₂O₃ 相互作用调控复杂。\n\n不确定说明：具体缺点表现与反应体系（如甲烷重整、氨合成、加氢反应）密切相关，上述为通用性总结；若需针对特定反应的评价，需结合具体工况数据。",
+      "claims": [
+        {
+          "claim": "Ru 纳米颗粒在高温或长期运行中易聚集长大，导致活性下降",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 Ru 纳米颗粒聚集长大相关内容"
+        },
+        {
+          "claim": "Al₂O₃ 表面羟基会促进 Ru 迁移",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 Al₂O₃ 表面羟基或 Ru 迁移相关内容"
+        },
+        {
+          "claim": "γ-Al₂O₃ 表面存在 Lewis 酸位",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 γ-Al₂O₃ 表面 Lewis 酸位相关内容"
+        },
+        {
+          "claim": "γ-Al₂O₃ 表面的 Lewis 酸位易引发副反应（如积碳、异构化）",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 γ-Al₂O₃ 表面 Lewis 酸位引发副反应相关内容"
+        },
+        {
+          "claim": "γ-Al₂O₃ 表面的 Lewis 酸位可能促进结焦失活",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 γ-Al₂O₃ 表面 Lewis 酸位促进结焦失活相关内容"
+        },
+        {
+          "claim": "Ru/Al₂O₃ 催化剂在烃类重整、CO₂ 重整等反应中易积碳覆盖活性位",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及 Ru/Al₂O₃ 用于高附加值精细化工产品，未提及烃类重整、CO₂ 重整或积碳覆盖活性位"
+        },
+        {
+          "claim": "Ru/Al₂O₃ 催化剂对 S 杂质敏感，易中毒",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及镍基催化剂失活主因包括硫/氯中毒，但未提及 Ru/Al₂O₃ 对 S 杂质敏感"
+        },
+        {
+          "claim": "Ru/Al₂O₃ 催化剂对 Cl 杂质敏感，易中毒",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及镍基催化剂失活主因包括硫/氯中毒，但未提及 Ru/Al₂O₃ 对 Cl 杂质敏感"
+        },
+        {
+          "claim": "Ru 成本较高",
+          "verdict": "supported",
+          "evidence": "05-REVIEW-多相加氢催化剂进展-c002 表格中 Ru/Al₂O₃ 的局限为\"价格极昂贵\""
+        },
+        {
+          "claim": "高温水汽条件下 Al₂O₃ 易发生相变（γ→θ→α）",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 Al₂O₃ 相变相关内容"
+        },
+        {
+          "claim": "高温水汽条件下 Al₂O₃ 比表面积下降",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及高温水汽条件下 Al₂O₃ 比表面积变化"
+        },
+        {
+          "claim": "高温水汽条件下 Al₂O₃ 比表面积下降导致 Ru 分散度降低",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及高温水汽、Al₂O₃ 比表面积与 Ru 分散度关系"
+        },
+        {
+          "claim": "常规浸渍法难以获得高分散小粒径 Ru",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及浸渍法或 Ru 分散度、粒径控制方法"
+        },
+        {
+          "claim": "Ru 与 Al₂O₃ 相互作用调控复杂",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及 Ru 与 Al₂O₃ 相互作用调控相关内容"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q030",
+      "question": "镍基催化剂失活的主要原因有哪些？",
+      "answer_text": "镍基催化剂失活的主要原因可归纳为以下几类：\n\n1. **积碳（结焦）**  \n   - 烃类裂解、CO歧化或聚合反应在表面生成碳质沉积，覆盖活性位或堵塞孔道。  \n   - 高温、低氢碳比、长停留时间会加剧。\n\n2. **硫中毒**  \n   - 原料中H₂S、硫醇等含硫化合物强吸附于Ni活性位，形成Ni-S键，导致可逆或不可逆中毒。  \n   - 低温下更易发生，且再生困难。\n\n3. **烧结与颗粒长大**  \n   - 高温还原或反应气氛下Ni微晶迁移聚集，比表面积下降，活性位减少。  \n   - 水热老化、载体性质（如弱相互作用）会促进烧结。\n\n4. **氧化与价态变化**  \n   - 氧化性气氛（如水蒸气、CO₂、O₂）使金属Ni氧化为NiO或形成Ni(OH)₂，降低催化活性。  \n   - 反复氧化-还原循环也会加速结构劣化。\n\n5. **卤素及重金属中毒**  \n   - Cl⁻、F⁻等卤素吸附或形成Ni卤化物，覆盖/改变活性位。  \n   - 原料中As、Pb、Hg等重金属与Ni形成合金或强吸附，导致永久失活。\n\n6. **载体或助剂效应变化**  \n   - 载体相变、孔结构坍塌、助剂流失或与Ni形成难还原化合物（如NiAl₂O₄尖晶石），降低可还原Ni比例。\n\n7. **机械/物理失活**  \n   - 颗粒破碎、粉化、孔道堵塞（粉尘、焦油冷凝）导致压降上升和传质受限。\n\n8. **水热失活**  \n   - 高温高水蒸气分压下，Ni烧结加速、载体水合相变，或Ni被氧化/迁移。\n\n**不确定说明**：具体主导失活原因取决于反应体系（如甲烷重整、加氢、CO₂甲烷化等）、原料杂质和操作条件；上述为通用归纳，未针对某一特定工艺定量排序。",
+      "claims": [
+        {
+          "claim": "镍基催化剂失活的主要原因包括积碳（结焦）。",
+          "verdict": "supported",
+          "evidence": "镍基催化剂失活主因包括硫/氯中毒、高温烧结和积碳。"
+        },
+        {
+          "claim": "烃类裂解在镍基催化剂表面生成碳质沉积。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'积碳'为失活主因之一，未提及'烃类裂解'这一具体机理"
+        },
+        {
+          "claim": "CO歧化在镍基催化剂表面生成碳质沉积。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'积碳'为失活主因之一，未提及'CO歧化'这一具体机理"
+        },
+        {
+          "claim": "聚合反应在镍基催化剂表面生成碳质沉积。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'积碳'为失活主因之一，未提及'聚合反应'这一具体机理"
+        },
+        {
+          "claim": "碳质沉积覆盖镍基催化剂的活性位。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'积碳'为失活主因之一，未解释积碳的具体作用机制"
+        },
+        {
+          "claim": "碳质沉积堵塞镍基催化剂的孔道。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'积碳'为失活主因之一，未解释积碳的具体作用机制"
+        },
+        {
+          "claim": "高温会加剧镍基催化剂的积碳。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'超过170℃后晶粒烧结与副反应风险显著上升'，但未明确提及高温加剧积碳"
+        },
+        {
+          "claim": "低氢碳比会加剧镍基催化剂的积碳。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'氢碳比'概念"
+        },
+        {
+          "claim": "长停留时间会加剧镍基催化剂的积碳。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'停留时间'概念"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括硫中毒。",
+          "verdict": "supported",
+          "evidence": "镍基催化剂失活主因包括硫/氯中毒、高温烧结和积碳。"
+        },
+        {
+          "claim": "原料中H₂S含硫化合物强吸附于Ni活性位。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'硫中毒'为失活主因之一，未提及H₂S或具体吸附机理"
+        },
+        {
+          "claim": "原料中硫醇等含硫化合物强吸附于Ni活性位。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'硫中毒'为失活主因之一，未提及硫醇或具体吸附机理"
+        },
+        {
+          "claim": "含硫化合物在Ni活性位形成Ni-S键。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'硫中毒'为失活主因之一，未提及Ni-S键的具体形成机理"
+        },
+        {
+          "claim": "硫中毒导致镍基催化剂可逆或不可逆中毒。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及'硫中毒'为失活主因之一，未说明硫中毒的可逆性"
+        },
+        {
+          "claim": "低温下硫中毒更易发生。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及硫中毒与温度的关系"
+        },
+        {
+          "claim": "硫中毒后再生困难。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'轻微积碳可在450℃空气氛围中烧炭再生；烧结失活不可逆'，但未提及硫中毒后再生是否困难"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括烧结与颗粒长大。",
+          "verdict": "supported",
+          "evidence": "镍基催化剂失活主因包括硫/氯中毒、高温烧结和积碳。"
+        },
+        {
+          "claim": "高温还原气氛下Ni微晶迁移聚集。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'高温烧结'为失活主因之一，但未提及'还原气氛'或'微晶迁移聚集'的具体机理"
+        },
+        {
+          "claim": "反应气氛下Ni微晶迁移聚集。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'高温烧结'为失活主因之一，但未提及'微晶迁移聚集'的具体机理"
+        },
+        {
+          "claim": "Ni微晶迁移聚集导致比表面积下降。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'高温烧结'为失活主因之一，但未解释烧结的具体后果"
+        },
+        {
+          "claim": "Ni微晶迁移聚集导致活性位减少。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'高温烧结'为失活主因之一，专利中提及'镍晶粒烧结长大、活性位数量减少'，但专利描述的是特定条件下的现象，非通用机理"
+        },
+        {
+          "claim": "水热老化会促进镍基催化剂烧结。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'水热老化'概念"
+        },
+        {
+          "claim": "载体与Ni弱相互作用会促进烧结。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'载体与Ni相互作用'概念"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括氧化与价态变化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'氧化与价态变化'为失活主因"
+        },
+        {
+          "claim": "氧化性气氛使金属Ni氧化为NiO。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及NiO或氧化性气氛对Ni的影响"
+        },
+        {
+          "claim": "水蒸气使金属Ni氧化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及水蒸气使Ni氧化"
+        },
+        {
+          "claim": "CO₂使金属Ni氧化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及CO₂使Ni氧化"
+        },
+        {
+          "claim": "O₂使金属Ni氧化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及O₂使Ni氧化"
+        },
+        {
+          "claim": "氧化性气氛使金属Ni形成Ni(OH)₂。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Ni(OH)₂"
+        },
+        {
+          "claim": "金属Ni氧化降低催化活性。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Ni氧化与催化活性的关系"
+        },
+        {
+          "claim": "反复氧化-还原循环会加速镍基催化剂结构劣化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'氧化-还原循环'概念"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括卤素及重金属中毒。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及'硫/氯中毒'为失活主因之一，包含氯（卤素），但未提及'重金属中毒'"
+        },
+        {
+          "claim": "Cl⁻吸附或形成Ni卤化物。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'氯中毒'为失活主因之一，但未提及Cl⁻吸附或Ni卤化物的具体机理"
+        },
+        {
+          "claim": "F⁻吸附或形成Ni卤化物。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及F⁻"
+        },
+        {
+          "claim": "卤素覆盖镍基催化剂的活性位。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'氯中毒'为失活主因之一，但未解释卤素的具体作用机制"
+        },
+        {
+          "claim": "卤素改变镍基催化剂的活性位。",
+          "verdict": "unsupported",
+          "evidence": "上下文提及'氯中毒'为失活主因之一，但未解释卤素的具体作用机制"
+        },
+        {
+          "claim": "原料中As与Ni形成合金。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及As或重金属中毒"
+        },
+        {
+          "claim": "原料中Pb与Ni形成合金。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Pb或重金属中毒"
+        },
+        {
+          "claim": "原料中Hg与Ni形成合金。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Hg或重金属中毒"
+        },
+        {
+          "claim": "原料中As与Ni形成强吸附。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及As或重金属中毒"
+        },
+        {
+          "claim": "原料中Pb与Ni形成强吸附。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Pb或重金属中毒"
+        },
+        {
+          "claim": "原料中Hg与Ni形成强吸附。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Hg或重金属中毒"
+        },
+        {
+          "claim": "重金属中毒导致镍基催化剂永久失活。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及重金属中毒"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括载体或助剂效应变化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'载体或助剂效应变化'为失活主因"
+        },
+        {
+          "claim": "载体相变导致镍基催化剂失活。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及载体相变"
+        },
+        {
+          "claim": "载体孔结构坍塌导致镍基催化剂失活。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及载体孔结构坍塌"
+        },
+        {
+          "claim": "助剂流失导致镍基催化剂失活。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及助剂流失"
+        },
+        {
+          "claim": "助剂与Ni形成难还原化合物NiAl₂O₄尖晶石。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及NiAl₂O₄尖晶石"
+        },
+        {
+          "claim": "NiAl₂O₄尖晶石降低可还原Ni比例。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及NiAl₂O₄尖晶石"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括机械/物理失活。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'机械/物理失活'为失活主因"
+        },
+        {
+          "claim": "颗粒破碎导致镍基催化剂压降上升。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及颗粒破碎或压降"
+        },
+        {
+          "claim": "颗粒粉化导致镍基催化剂压降上升。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及颗粒粉化或压降"
+        },
+        {
+          "claim": "孔道堵塞导致镍基催化剂压降上升。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及孔道堵塞或压降"
+        },
+        {
+          "claim": "粉尘导致孔道堵塞。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及粉尘"
+        },
+        {
+          "claim": "焦油冷凝导致孔道堵塞。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及焦油冷凝"
+        },
+        {
+          "claim": "孔道堵塞导致传质受限。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及孔道堵塞或传质受限"
+        },
+        {
+          "claim": "镍基催化剂失活的主要原因包括水热失活。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'水热失活'为失活主因"
+        },
+        {
+          "claim": "高温高水蒸气分压下Ni烧结加速。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'水蒸气分压'概念"
+        },
+        {
+          "claim": "高温高水蒸气分压下载体发生水合相变。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'水蒸气分压'或'水合相变'"
+        },
+        {
+          "claim": "高温高水蒸气分压下Ni被氧化。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'水蒸气分压'或Ni被氧化"
+        },
+        {
+          "claim": "高温高水蒸气分压下Ni发生迁移。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及'水蒸气分压'或Ni迁移"
+        },
+        {
+          "claim": "具体主导失活原因取决于反应体系。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅列举失活主因，未说明主导原因取决于反应体系"
+        },
+        {
+          "claim": "具体主导失活原因取决于原料杂质。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅列举失活主因，未说明主导原因取决于原料杂质"
+        },
+        {
+          "claim": "具体主导失活原因取决于操作条件。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅列举失活主因，未说明主导原因取决于操作条件"
+        },
+        {
+          "claim": "上述失活原因为通用归纳。",
+          "verdict": "unsupported",
+          "evidence": "上下文未明确说明所列失活原因为'通用归纳'"
+        },
+        {
+          "claim": "上述失活原因未针对某一特定工艺定量排序。",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及'定量排序'"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q031",
+      "question": "制备格氏试剂需要深度干燥的 THF，查溶剂表应该用什么方法？",
+      "answer_text": "- **首选方法**：THF 先用无水氯化钙或分子筛预干燥，再在**金属钠/二苯甲酮**（或钠钾合金）存在下回流至深蓝色，现蒸现用。\n- **溶剂表常见标注**：查“无水 THF”通常对应 **Na/二苯甲酮回流蒸馏**；若表中写“分子筛干燥”，仅适合预干燥或短期储存，不足以满足格氏试剂对深度干燥的要求。\n- **注意**：THF 久置会生成过氧化物，蒸馏前需先检验并去除过氧化物，避免爆炸风险。\n- **不确定点**：不同溶剂手册/供应商表的具体标注可能略有差异（如钠丝、钠钾合金、氢化钙等），需以你手头溶剂表的“无水级”条目为准。",
+      "claims": [
+        {
+          "claim": "THF 先用无水氯化钙预干燥",
+          "verdict": "unsupported",
+          "evidence": "上下文中关于THF干燥的描述为'须经钠丝-二苯甲酮回流至深蓝色'（c004）以及'钠丝-二苯甲酮回流（深度）；4Å 分子筛（快速）'（c001表格），未提及无水氯化钙预干燥"
+        },
+        {
+          "claim": "THF 先用分子筛预干燥",
+          "verdict": "unsupported",
+          "evidence": "上下文中THF的干燥方法为'钠丝-二苯甲酮回流（深度）；4Å 分子筛（快速）'（c001表格），但'快速'不等于'预干燥'，且格氏试剂SOP中明确要求'须经钠丝-二苯甲酮回流至深蓝色'（c004），未提及分子筛预干燥的步骤"
+        },
+        {
+          "claim": "THF 在金属钠/二苯甲酮存在下回流至深蓝色",
+          "verdict": "supported",
+          "evidence": "c004：'溶剂四氢呋喃（THF）：须经钠丝-二苯甲酮回流至深蓝色且颜色稳定'；c001表格：'钠丝-二苯甲酮回流（深度）'"
+        },
+        {
+          "claim": "THF 在钠钾合金存在下回流至深蓝色",
+          "verdict": "unsupported",
+          "evidence": "上下文中明确为'钠丝-二苯甲酮'（c004、c001），未提及'钠钾合金'，二者不同"
+        },
+        {
+          "claim": "THF 现蒸现用",
+          "verdict": "supported",
+          "evidence": "c004：'现蒸现用，不得使用存放超过一周的干燥 THF'"
+        },
+        {
+          "claim": "查无水 THF 通常对应 Na/二苯甲酮回流蒸馏",
+          "verdict": "supported",
+          "evidence": "c004：'须经钠丝-二苯甲酮回流至深蓝色且颜色稳定（表明深度干燥、无过氧化物），现蒸现用'"
+        },
+        {
+          "claim": "若表中写分子筛干燥，仅适合预干燥",
+          "verdict": "unsupported",
+          "evidence": "c001表格中分子筛标注为'快速'，而非'预干燥'；上下文未出现'预干燥'概念"
+        },
+        {
+          "claim": "若表中写分子筛干燥，仅适合短期储存",
+          "verdict": "unsupported",
+          "evidence": "c001表格中分子筛标注为'快速'，未提及'短期储存'；c004强调THF'不得使用存放超过一周的干燥THF'，但这是针对钠丝-二苯甲酮干燥后的THF，非分子筛干燥"
+        },
+        {
+          "claim": "分子筛干燥不足以满足格氏试剂对深度干燥的要求",
+          "verdict": "supported",
+          "evidence": "c001表格：分子筛为'快速'，钠丝-二苯甲酮为'深度'；c004格氏试剂SOP明确要求'须经钠丝-二苯甲酮回流至深蓝色'（深度干燥），且c001使用说明指出'需深度无水（如无水无氧反应）时优先选钠丝-二苯甲酮回流或金属氢化物处理'"
+        },
+        {
+          "claim": "THF 久置会生成过氧化物",
+          "verdict": "supported",
+          "evidence": "c001表格储存注意：'避光、充氮密封，防止过氧化物积累'"
+        },
+        {
+          "claim": "蒸馏前需先检验并去除过氧化物",
+          "verdict": "unsupported",
+          "evidence": "c004提到'钠丝-二苯甲酮回流至深蓝色且颜色稳定（表明深度干燥、无过氧化物）'，说明干燥过程可同时检测过氧化物，但未明确提及'蒸馏前需先检验并去除过氧化物'作为独立步骤"
+        },
+        {
+          "claim": "THF 蒸馏前去除过氧化物可避免爆炸风险",
+          "verdict": "unsupported",
+          "evidence": "上下文提及防止过氧化物积累（c001）及无过氧化物状态（c004），但未明确提及'爆炸风险'及'蒸馏前去除过氧化物可避免爆炸'的因果关系"
+        },
+        {
+          "claim": "不同溶剂手册/供应商表的具体标注可能略有差异",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供一个数据速查表（c001），未提及其他溶剂手册或供应商表的差异"
+        },
+        {
+          "claim": "溶剂手册标注差异包括钠丝",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供一个数据速查表，未提及其他溶剂手册或标注差异"
+        },
+        {
+          "claim": "溶剂手册标注差异包括钠钾合金",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供一个数据速查表，未提及其他溶剂手册或标注差异，且全文未出现'钠钾合金'"
+        },
+        {
+          "claim": "溶剂手册标注差异包括氢化钙",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提供一个数据速查表，未提及其他溶剂手册或标注差异，且全文未出现'氢化钙'"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q032",
+      "question": "如果反应要用甲苯作溶剂，按速查表应该用什么方法干燥？",
+      "answer_text": "不确定您所指的“速查表”是哪一份（不同教材/手册的干燥剂速查表可能略有差异），因此无法给出该表对应的唯一答案。按常见实验室干燥做法：\n\n- **甲苯常用干燥方法**：先用无水氯化钙或无水硫酸镁预干燥，再可用金属钠/钠丝（或钠钾合金）回流进一步除水，最后蒸馏收集。\n- **更严格无水**：可用分子筛（如4A）干燥，或经溶剂纯化系统处理。\n- **注意**：甲苯与钠回流相对安全，但仍需严格无水无氧操作；若速查表有指定干燥剂，应以该表为准。",
+      "claims": [
+        {
+          "claim": "甲苯常用干燥方法包括先用无水氯化钙预干燥",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及甲苯的推荐干燥剂为\"钠丝；4Å分子筛；共沸除水\"，未提及无水氯化钙预干燥"
+        },
+        {
+          "claim": "甲苯常用干燥方法包括先用无水硫酸镁预干燥",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅提及甲苯的推荐干燥剂为\"钠丝；4Å分子筛；共沸除水\"，未提及无水硫酸镁预干燥"
+        },
+        {
+          "claim": "甲苯可用金属钠回流进一步除水",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及甲苯可用\"钠丝\"干燥，但未提及\"金属钠回流\"的具体操作方式"
+        },
+        {
+          "claim": "甲苯可用钠丝回流进一步除水",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】表格中甲苯的推荐干燥剂列明\"钠丝；4Å分子筛；共沸除水\"，且表头说明\"需深度无水（如无水无氧反应）时优先选钠丝-二苯甲酮回流或金属氢化物处理\""
+        },
+        {
+          "claim": "甲苯可用钠钾合金回流进一步除水",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及甲苯可用\"钠丝\"干燥，但未提及钠钾合金"
+        },
+        {
+          "claim": "甲苯经回流除水后需蒸馏收集",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及甲苯经回流除水后是否需要蒸馏收集的具体操作"
+        },
+        {
+          "claim": "甲苯更严格无水时可用分子筛干燥",
+          "verdict": "unsupported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】明确说明\"需深度无水（如无水无氧反应）时优先选钠丝-二苯甲酮回流或金属氢化物处理\"，分子筛（4Å）仅列于\"一般无水要求\"的快速干燥方法，严格无水时优先方案不是分子筛"
+        },
+        {
+          "claim": "甲苯更严格无水时可用4A分子筛干燥",
+          "verdict": "unsupported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】明确说明\"需深度无水（如无水无氧反应）时优先选钠丝-二苯甲酮回流或金属氢化物处理\"，4Å分子筛属于一般无水要求的快速干燥方法，非严格无水时的优先方案"
+        },
+        {
+          "claim": "甲苯更严格无水时可经溶剂纯化系统处理",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及\"溶剂纯化系统\""
+        },
+        {
+          "claim": "甲苯与钠回流相对安全",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未对甲苯与钠回流的安全性作出\"相对安全\"的评价；金属钠的SDS强调其遇水剧烈反应的危险性，但未直接评价甲苯-钠体系的安全性"
+        },
+        {
+          "claim": "甲苯与钠回流需严格无水无氧操作",
+          "verdict": "supported",
+          "evidence": "【06-TABLE-常用有机溶剂物性与干燥-c001】表头说明\"需深度无水（如无水无氧反应）时优先选钠丝-二苯甲酮回流\"，且【02-SDS-金属钠-c003】指出金属钠遇水剧烈反应，【01-SOP-格氏试剂制备与使用-c003】也强调无水无氧条件的重要性"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q033",
+      "question": "综合成本和效果，甲苯加氢制甲基环己烷应该选什么催化剂？",
+      "answer_text": "- **首选：负载型Ni催化剂（如Ni/Al₂O₃）**：成本低、加氢活性足够，适合常规固定床工艺，综合性价比最高。  \n- **次选：负载型Pd或Pt催化剂（如Pd/Al₂O₃、Pt/Al₂O₃）**：活性高、条件温和、寿命长，但贵金属成本高，适合对纯度/稳定性要求高或小规模场景。  \n- **不优先选：Ru、Rh等**：活性好但价格更贵，除非有特殊选择性需求。  \n- **工艺匹配建议**：若追求低成本，选Ni基并优化反应温度/压力与抗硫措施；若追求长周期稳定和低能耗，选Pd/Pt基。  \n- **不确定点**：具体最优选择还取决于原料甲苯纯度与杂质（尤其硫、水）、反应器类型、操作压力/温度、催化剂寿命要求和贵金属回收条件；缺少这些工况信息时无法给出唯一最优。",
+      "claims": [
+        {
+          "claim": "负载型Ni催化剂（如Ni/Al₂O₃）成本低",
+          "verdict": "supported",
+          "evidence": "Pd/C 单位质量活性虽高，但钯价格约为镍的 6 倍；Ni/Al₂O₃ 廉价易得、稳定性好、可多次再生"
+        },
+        {
+          "claim": "负载型Ni催化剂（如Ni/Al₂O₃）加氢活性足够",
+          "verdict": "supported",
+          "evidence": "甲苯转化率 99.2%，甲基环己烷选择性 99.1%，收率 92.3%；活性中等，需较高温度和压力"
+        },
+        {
+          "claim": "负载型Ni催化剂（如Ni/Al₂O₃）适合常规固定床工艺",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及固定床工艺，仅提及高压加氢釜；适用反应为芳烃加氢、硝基还原"
+        },
+        {
+          "claim": "负载型Ni催化剂（如Ni/Al₂O₃）综合性价比最高",
+          "verdict": "unsupported",
+          "evidence": "上下文仅说明Ni催化剂成本低、Pd/C综合成本明显高于本发明方案，但未明确Ni/Al₂O₃\"综合性价比最高\"的绝对结论；性价比涉及多因素，上下文未全面比较"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）活性高",
+          "verdict": "unsupported",
+          "evidence": "上下文提及Pd/C活性高，但未提及Pd/Al₂O₃；催化剂载体不同（C vs Al₂O₃），不能等同"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）反应条件温和",
+          "verdict": "unsupported",
+          "evidence": "上下文提及Pd/C条件温和，但未提及Pd/Al₂O₃；载体不同不能等同"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）寿命长",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及Pd/Al₂O₃，且Pd/C易被硫化物毒化失活，寿命并非其优势"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）贵金属成本高",
+          "verdict": "unsupported",
+          "evidence": "上下文提及Pd/C贵金属成本高、钯价格约为镍的6倍，但未提及Pd/Al₂O₃；虽然同为钯基，但上下文明确讨论的是Pd/C而非Pd/Al₂O₃"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）适合对纯度要求高的场景",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"纯度要求\"与Pd催化剂的关联；Pd/C适用于羰基加氢、脱苄基、烯烃加氢"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）适合对稳定性要求高的场景",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及Pd/Al₂O₃；Pd/C易被硫化物毒化失活，稳定性并非其优势"
+        },
+        {
+          "claim": "负载型Pd催化剂（如Pd/Al₂O₃）适合小规模场景",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"小规模场景\"与任何催化剂的关联"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）活性高",
+          "verdict": "supported",
+          "evidence": "Pt/Al₂O3 活性与选择性均衡"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）反应条件温和",
+          "verdict": "unsupported",
+          "evidence": "上下文仅说Pt/Al₂O3活性与选择性均衡，未提及其条件温和；条件温和是Pd/C的特点"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）寿命长",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及Pt/Al₂O3的寿命信息"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）贵金属成本高",
+          "verdict": "supported",
+          "evidence": "Pt/Al₂O3 价格昂贵、供应受限"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）适合对纯度要求高的场景",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"纯度要求\"与Pt/Al₂O3的关联"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）适合对稳定性要求高的场景",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及Pt/Al₂O3的稳定性信息"
+        },
+        {
+          "claim": "负载型Pt催化剂（如Pt/Al₂O₃）适合小规模场景",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"小规模场景\"与任何催化剂的关联"
+        },
+        {
+          "claim": "Ru催化剂活性好",
+          "verdict": "supported",
+          "evidence": "Ru/Al₂O3 选择性优异，尤其芳烃深度加氢"
+        },
+        {
+          "claim": "Ru催化剂价格更贵",
+          "verdict": "supported",
+          "evidence": "Ru/Al₂O3 价格极昂贵"
+        },
+        {
+          "claim": "Ru催化剂不优先选择，除非有特殊选择性需求",
+          "verdict": "supported",
+          "evidence": "对选择性要求苛刻的高附加值产物可考虑 Ru/Al₂O3；大宗芳烃饱和加氢首选 Ni 系催化剂"
+        },
+        {
+          "claim": "Rh催化剂活性好",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及Rh催化剂"
+        },
+        {
+          "claim": "Rh催化剂价格更贵",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及Rh催化剂"
+        },
+        {
+          "claim": "Rh催化剂不优先选择，除非有特殊选择性需求",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及Rh催化剂"
+        },
+        {
+          "claim": "若追求低成本，应选Ni基催化剂",
+          "verdict": "supported",
+          "evidence": "大宗芳烃饱和加氢：首选 Ni 系催化剂，以成本为导向"
+        },
+        {
+          "claim": "若追求低成本，应优化反应温度",
+          "verdict": "unsupported",
+          "evidence": "上下文未将\"优化反应温度\"与\"追求低成本\"建立关联；温度优化是为了收率和选择性"
+        },
+        {
+          "claim": "若追求低成本，应优化反应压力",
+          "verdict": "unsupported",
+          "evidence": "上下文未将\"优化反应压力\"与\"追求低成本\"建立关联"
+        },
+        {
+          "claim": "若追求低成本，应采取抗硫措施",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"抗硫措施\"与\"低成本\"的关联；硫中毒是失活原因，但未讨论抗硫措施"
+        },
+        {
+          "claim": "若追求长周期稳定和低能耗，应选Pd/Pt基催化剂",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及\"长周期稳定\"\"低能耗\"与Pd/Pt基催化剂的关联；Pd/C易被硫化物毒化，稳定性不佳；Pt价格昂贵、供应受限"
+        },
+        {
+          "claim": "具体最优选择取决于原料甲苯纯度",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及\"甲苯纯度\"作为催化剂选择因素"
+        },
+        {
+          "claim": "具体最优选择取决于原料甲苯中的杂质（尤其硫、水）",
+          "verdict": "supported",
+          "evidence": "Pd/C 对原料中痕量硫化物敏感、易毒化失活；镍基催化剂失活主因包括硫/氯中毒"
+        },
+        {
+          "claim": "具体最优选择取决于反应器类型",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及反应器类型对催化剂选择的影响"
+        },
+        {
+          "claim": "具体最优选择取决于操作压力",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未将操作压力作为催化剂选择的决定因素；Ni/Al₂O3需较高压力是固有属性"
+        },
+        {
+          "claim": "具体最优选择取决于操作温度",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未将操作温度作为催化剂选择的决定因素；温度是反应条件而非选择依据"
+        },
+        {
+          "claim": "具体最优选择取决于催化剂寿命要求",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确将\"催化剂寿命要求\"作为选择依据；虽提及烧结失活不可逆，但未与选择决策关联"
+        },
+        {
+          "claim": "具体最优选择取决于贵金属回收条件",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及贵金属回收条件"
+        },
+        {
+          "claim": "缺少工况信息时无法给出唯一最优选择",
+          "verdict": "unsupported",
+          "evidence": "上下文给出了明确选择建议：大宗芳烃饱和加氢首选Ni系催化剂，以成本为导向；对选择性要求苛刻的高附加值产物可考虑Ru/Al₂O3；含羰基、苄基等官能团的底物需要温和条件时，Pd/C更合适"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q034",
+      "question": "实验报告的最佳温度 155 ℃ 与专利推荐的 130–150 ℃ 不完全一致，两份文档各自的理由是什么？",
+      "answer_text": "结论：无法给出两份文档各自的理由。原因是我没有看到实验报告和专利原文，无法核实“最佳温度155 ℃”与“130–150 ℃”分别基于什么依据。以下是一般性分析框架，供你对照原文核实：\n\n- **实验报告侧可能理由（需核实）**\n  - 155 ℃为实验筛选出的收率/选择性/转化率最优点。\n  - 该温度下副产物最少或产品纯度最高。\n  - 反应速率与能耗/时间综合权衡后的实验最优。\n  - 可能仅在小试特定配方/设备条件下成立。\n\n- **专利侧可能理由（需核实）**\n  - 130–150 ℃是权利要求保护范围，追求覆盖性与实施稳定性，而非单点最优。\n  - 该区间内反应可控、安全性好、副反应风险低。\n  - 考虑放大生产、溶剂沸点、设备耐压等工程约束。\n  - 专利实施例可能未覆盖155 ℃或该点缺乏支持。\n\n- **不一致的常见原因**\n  - 评价指标不同（收率 vs 纯度 vs 安全/成本）。\n  - 实验条件不同（配方、浓度、催化剂、升温速率、设备）。\n  - 专利范围是保守区间，实验最佳点是单点优化结果。\n\n不确定的原因：缺少两份文档的具体内容（实验数据表、专利实施例/权利要求、所述效果数据），无法判断各自理由。建议提供相关段落或数据，我可逐条对比说明。",
+      "claims": [
+        {
+          "claim": "结论：无法给出两份文档各自的理由。",
+          "verdict": "supported",
+          "evidence": "上下文包含04-REPORT-2023-036实验报告和03-PATENT-CN2023102567专利的完整内容，但用户声称\"没有看到实验报告和专利原文\""
+        },
+        {
+          "claim": "原因是我没有看到实验报告和专利原文，无法核实\"最佳温度155 ℃\"与\"130–150 ℃\"分别基于什么依据。",
+          "verdict": "unsupported",
+          "evidence": "上下文中明确包含04-REPORT-2023-036实验报告（c001-c006）和03-PATENT-CN2023102567专利（c001-c008）的完整内容，包括\"最佳反应温度为 155 ℃\"和\"反应温度 130–150 ℃\"的依据，用户声称\"没有看到\"与上下文矛盾"
+        },
+        {
+          "claim": "实验报告侧155 ℃可能为实验筛选出的收率/选择性/转化率最优点。",
+          "verdict": "supported",
+          "evidence": "【04-REPORT-2023-036-2-甲基环己酮工艺优化-c006】\"综合收率与选择性，最佳反应温度为 155 ℃（收率 93%，选择性 96%）\"，表格显示155℃时转化率97%、选择性96%、收率93%均为最高"
+        },
+        {
+          "claim": "实验报告侧155 ℃可能为该温度下副产物最少或产品纯度最高。",
+          "verdict": "supported",
+          "evidence": "【04-REPORT-2023-036-2-甲基环己酮工艺优化-c006】155℃时选择性96%为最高，【c005】提到175℃时\"选择性降至85%，产品气味异常（疑似副产物增多）\"，反证155℃副产物较少"
+        },
+        {
+          "claim": "实验报告侧155 ℃可能为反应速率与能耗/时间综合权衡后的实验最优。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及反应速率、能耗或时间权衡的相关分析，仅提到\"综合收率与选择性\""
+        },
+        {
+          "claim": "实验报告侧155 ℃可能仅在小试特定配方/设备条件下成立。",
+          "verdict": "supported",
+          "evidence": "【04-REPORT-2023-036-2-甲基环己酮工艺优化-c006】\"建议放大时温控联锁报警值设为 165 ℃\"，暗示155℃为小试结果；且【c003】明确为\"小试最佳温度\""
+        },
+        {
+          "claim": "专利侧130–150 ℃是权利要求保护范围，追求覆盖性与实施稳定性，而非单点最优。",
+          "verdict": "supported",
+          "evidence": "【03-PATENT-CN2023102567-镍催化加氢-c008】权利要求表述为\"反应温度 130–150 ℃\"，是一个范围区间；【c005】分析180℃时\"温度过高导致镍晶粒烧结长大\"，推荐130-150℃为稳定可控区间"
+        },
+        {
+          "claim": "专利侧130–150 ℃区间内反应可控、安全性好、副反应风险低。",
+          "verdict": "supported",
+          "evidence": "【03-PATENT-CN2023102567-镍催化加氢-c005】\"温度过高导致镍晶粒烧结长大、活性位数量减少；同时高温下发生甲基环己烷脱氢芳构化及少量 C-C 键裂解等副反应\"，反证130-150℃副反应风险低；【c004】实施例1在140℃取得99.2%转化率、99.1%选择性，证明反应可控"
+        },
+        {
+          "claim": "专利侧130–150 ℃考虑放大生产、溶剂沸点、设备耐压等工程约束。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及溶剂沸点、设备耐压、放大生产等工程约束的具体内容"
+        },
+        {
+          "claim": "专利实施例可能未覆盖155 ℃或该点缺乏支持。",
+          "verdict": "supported",
+          "evidence": "【03-PATENT-CN2023102567-镍催化加氢-c004-c007】实施例仅包含140℃和180℃，对比例包含220℃，确实未覆盖155℃"
+        },
+        {
+          "claim": "不一致的常见原因包括评价指标不同（收率 vs 纯度 vs 安全/成本）。",
+          "verdict": "supported",
+          "evidence": "实验报告明确\"综合收率与选择性\"（【04-REPORT-2023-036-2-甲基环己酮工艺优化-c006】），专利强调\"钯价格约为镍的6倍\"\"综合成本明显高于本发明方案\"（【03-PATENT-CN2023102567-镍催化加氢-c006】），评价维度确有差异"
+        },
+        {
+          "claim": "不一致的常见原因包括实验条件不同（配方、浓度、催化剂、升温速率、设备）。",
+          "verdict": "supported",
+          "evidence": "实验报告使用\"2-甲酚\"为原料、\"异丙醇\"为溶剂（【04-REPORT-2023-036-2-甲基环己酮工艺优化-c002-c003】），专利使用\"甲苯\"为原料、\"正己烷\"为溶剂（【03-PATENT-CN2023102567-镍催化加氢-c004】），底物和溶剂均不同"
+        },
+        {
+          "claim": "不一致的常见原因包括专利范围是保守区间，实验最佳点是单点优化结果。",
+          "verdict": "supported",
+          "evidence": "专利权利要求为区间\"130–150 ℃\"（【03-PATENT-CN2023102567-镍催化加氢-c008】），实验报告明确给出单点\"最佳反应温度为 155 ℃\"（【04-REPORT-2023-036-2-甲基环己酮工艺优化-c006】）"
+        },
+        {
+          "claim": "不确定的原因是缺少两份文档的具体内容（实验数据表、专利实施例/权利要求、所述效果数据），无法判断各自理由。",
+          "verdict": "unsupported",
+          "evidence": "上下文中完整包含实验报告的数据表（批次1-4的温度-转化率-选择性-收率数据）、专利的实施例1-2和对比例1-2、以及权利要求，用户声称\"缺少\"与上下文矛盾"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q035",
+      "question": "Hydrogenation 工艺里 Ni/Al2O3 的推荐温度区间是多少？",
+      "answer_text": "- **推荐温度区间**：Ni/Al₂O₃ 催化加氢常用 **120–200 °C**；许多工业/中试装置落在 **140–180 °C**。\n- **依据/适用性**：具体最优温度取决于底物（如硝基、腈、醛/酮、双键）、H₂ 压力、空速、Ni 负载量与助剂；低温利于选择性，高温利于转化率但易副反应/结焦。\n- **不确定说明**：若你指某一特定加氢工艺（如油脂加氢、硝基苯加氢、己二腈加氢等），推荐区间会明显不同，需给出底物与工艺条件才能精确。",
+      "claims": [
+        {
+          "claim": "Ni/Al₂O₃ 催化加氢常用温度为 120–200 °C",
+          "verdict": "unsupported",
+          "evidence": "上下文提到镍基催化剂使用温度一般控制在 130–160 ℃（05-REVIEW-c003），实施例温度为 140 ℃、180 ℃（03-PATENT-c004-c005），实验报告温度为 120–170 ℃（04-REPORT-c006）。200 ℃超出上下文提及范围，且明确提到超过 170 ℃后风险显著上升。"
+        },
+        {
+          "claim": "许多工业/中试装置的 Ni/Al₂O₃ 催化加氢温度落在 140–180 °C",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及'工业/中试装置'的具体温度分布。专利实施例2的180 ℃是考察温度过高的情况，且明确导致收率下降；综述推荐130–160 ℃；实验报告最佳155 ℃，超过170 ℃选择性下降。180 ℃并非推荐温度，上下文不支持'许多装置落在140–180 ℃'的表述。"
+        },
+        {
+          "claim": "Ni/Al₂O₃ 催化加氢的具体最优温度取决于底物类型",
+          "verdict": "supported",
+          "evidence": "甲苯加氢推荐130–150 ℃（03-PATENT-c008），2-甲基环己酮最佳155 ℃（04-REPORT-c006），不同底物对应不同最优温度。"
+        },
+        {
+          "claim": "Ni/Al₂O₃ 催化加氢的具体最优温度取决于 H₂ 压力",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未讨论H₂压力变化对最优温度的影响，所有案例中压力固定为2.5 MPa。"
+        },
+        {
+          "claim": "Ni/Al₂O₃ 催化加氢的具体最优温度取决于空速",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及空速概念。"
+        },
+        {
+          "claim": "Ni/Al₂O₃ 催化加氢的具体最优温度取决于 Ni 负载量",
+          "verdict": "insufficient_info",
+          "evidence": "上下文中Ni负载量均为10 wt%固定值，未讨论负载量变化对温度的影响。"
+        },
+        {
+          "claim": "Ni/Al₂O₃ 催化加氢的具体最优温度取决于助剂",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及任何助剂的使用或影响。"
+        },
+        {
+          "claim": "低温利于 Ni/Al₂O₃ 催化加氢的选择性",
+          "verdict": "supported",
+          "evidence": "实施例2中180 ℃选择性降至91.5%，而140 ℃为99.1%（03-PATENT-c005）；实验报告中155 ℃选择性96%，170 ℃降至88%（04-REPORT-c006）；综述指出超过170 ℃后副反应风险显著上升（05-REVIEW-c003）。"
+        },
+        {
+          "claim": "高温利于 Ni/Al₂O₃ 催化加氢的转化率",
+          "verdict": "supported",
+          "evidence": "实验报告中120 ℃转化率82%，140 ℃94%，155 ℃97%，170 ℃99%（04-REPORT-c006）；温度升高转化率提高。"
+        },
+        {
+          "claim": "高温易导致 Ni/Al₂O₃ 催化加氢发生副反应",
+          "verdict": "supported",
+          "evidence": "180 ℃时发生甲基环己烷脱氢芳构化及C-C键裂解等副反应（03-PATENT-c005）；175 ℃时产品气味异常、疑似副产物增多（04-REPORT-c005）；超过170 ℃后副反应风险显著上升（05-REVIEW-c003）。"
+        },
+        {
+          "claim": "高温易导致 Ni/Al₂O₃ 催化加氢结焦",
+          "verdict": "unsupported",
+          "evidence": "上下文提到镍基催化剂失活主因包括'积碳'（05-REVIEW-c004），但积碳是'失活主因之一'，未明确将积碳与高温直接关联。高温烧结是明确提及的，但结焦/积碳的成因未明确归因于高温。"
+        },
+        {
+          "claim": "油脂加氢的 Ni/Al₂O₃ 推荐温度区间与其他工艺明显不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及油脂加氢。"
+        },
+        {
+          "claim": "硝基苯加氢的 Ni/Al₂O₃ 推荐温度区间与其他工艺明显不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅在表格中列出Ni/Al₂O₃适用反应包括'硝基还原'（05-REVIEW-c002），但未提供硝基苯加氢的具体温度数据。"
+        },
+        {
+          "claim": "己二腈加氢的 Ni/Al₂O₃ 推荐温度区间与其他工艺明显不同",
+          "verdict": "insufficient_info",
+          "evidence": "上下文完全未提及己二腈加氢。"
+        },
+        {
+          "claim": "需给出底物与工艺条件才能精确确定 Ni/Al₂O₃ 催化加氢的推荐温度区间",
+          "verdict": "supported",
+          "evidence": "甲苯加氢推荐130–150 ℃（03-PATENT-c008），2-甲基环己酮最佳155 ℃（04-REPORT-c006），不同底物对应不同最优温度；且专利权利要求明确限定氢气压力2.0–3.0 MPa（03-PATENT-c008），表明工艺条件影响推荐区间。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q036",
+      "question": "CAS 号 7440-23-5 对应的是什么物质？",
+      "answer_text": "- CAS 号 **7440-23-5** 对应的是 **钠（Sodium）**，化学符号 **Na**。\n- 它是一种碱金属元素，原子序数 11。\n- 常见形态包括金属钠（银白色软金属），遇水剧烈反应。",
+      "claims": [
+        {
+          "claim": "CAS 号 7440-23-5 对应的是钠（Sodium）",
+          "verdict": "supported",
+          "evidence": "CAS 号：7440-23-5；化学品中文名：金属钠"
+        },
+        {
+          "claim": "钠的化学符号是 Na",
+          "verdict": "supported",
+          "evidence": "分子式：Na"
+        },
+        {
+          "claim": "钠是一种碱金属元素",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及\"金属钠\"、\"分子式：Na\"、\"原子量：22.99\"及遇水反应等性质，未提及\"碱金属\"这一元素分类"
+        },
+        {
+          "claim": "钠的原子序数是 11",
+          "verdict": "unsupported",
+          "evidence": "上下文仅给出原子量22.99，未提及原子序数；原子序数11属于外部知识"
+        },
+        {
+          "claim": "钠的常见形态包括金属钠",
+          "verdict": "insufficient_info",
+          "evidence": "上下文仅描述了\"金属钠\"这一种形态，未提及其他形态，无法支撑\"包括\"这一表述"
+        },
+        {
+          "claim": "金属钠是银白色软金属",
+          "verdict": "unsupported",
+          "evidence": "上下文未提及金属钠的颜色（银白色）和硬度（软）等物理外观特征"
+        },
+        {
+          "claim": "金属钠遇水剧烈反应",
+          "verdict": "supported",
+          "evidence": "金属钠遇水发生剧烈反应，生成氢氧化钠并放出氢气，反应放热可使氢气自燃甚至爆炸"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q041",
+      "question": "专利实施例 2 在 180 ℃ 时收率上升到了 95%，可能的原因是什么？",
+      "answer_text": "不确定原因：未提供专利实施例2的具体反应体系、原料、溶剂、催化剂及对比数据，无法针对性判断。以下为化工研发中收率随温度升至180 ℃显著提高的常见可能原因：\n\n1. **反应速率提升**：180 ℃下活化能克服更充分，主反应速率显著加快，短时间内转化率提高。\n2. **原料溶解/分散改善**：高温使固液或气液传质改善，原料更充分接触催化剂。\n3. **副反应被抑制或主反应选择性提高**：在该温度区间主反应路径占优，竞争副反应活化能更高、升温不利。\n4. **催化剂活性释放**：催化剂需达到一定温度才活化（如焙烧、还原、相变），180 ℃进入高活性窗口。\n5. **中间体转化完全**：低温下积累的中间体在180 ℃下进一步转化为目标产物。\n6. **产物脱附/移出改善**：高温促进产物从催化剂表面脱附或随气流移出，减少二次反应。\n7. **热力学有利**：若反应吸热或平衡受温度正向移动，升温提高平衡收率。\n8. **粘度降低、混合更均匀**：高温降低体系粘度，传热传质更均匀，减少局部浓度不均。\n\n建议核对实施例2的反应类型、对比温度点及副产物数据以确认主因。",
+      "claims": [
+        {
+          "claim": "未提供专利实施例2的具体反应体系、原料、溶剂、催化剂及对比数据",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确记载了实施例2的具体内容：'在与实施例1相同的投料和压力下，将反应温度提高至180℃，其余条件不变'，并给出了收率77.8%、选择性91.5%的数据，以及发明人的分析。实施例1已详细说明反应体系为甲苯100 mmol、正己烷200 mL、Ni/Al2O3催化剂（Ni负载量10 wt%，用量为底物质量的5%）、氢气压力2.5 MPa、反应6 h。"
+        },
+        {
+          "claim": "180 ℃下活化能克服更充分，主反应速率显著加快，短时间内转化率提高",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确指出180℃时'收率降至77.8%，选择性降至91.5%'，且发明人分析'温度过高导致镍晶粒烧结长大、活性位数量减少；同时高温下发生甲基环己烷脱氢芳构化及少量C-C键裂解等副反应'。该断言与上下文矛盾，180℃下主反应并未占优，反而副反应加剧导致收率下降。"
+        },
+        {
+          "claim": "高温使固液或气液传质改善，原料更充分接触催化剂",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及180℃下传质改善或原料接触催化剂情况的相关内容。"
+        },
+        {
+          "claim": "在该温度区间主反应路径占优，竞争副反应活化能更高、升温不利",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确指出180℃时'收率降至77.8%，选择性降至91.5%'，且发明人分析高温下发生'甲基环己烷脱氢芳构化及少量C-C键裂解等副反应'，说明在180℃副反应路径占优而非主反应路径占优。该断言与上下文矛盾。"
+        },
+        {
+          "claim": "催化剂需达到一定温度才活化（如焙烧、还原、相变），180 ℃进入高活性窗口",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确指出180℃时'收率降至77.8%，选择性降至91.5%'，且发明人分析'温度过高导致镍晶粒烧结长大、活性位数量减少'，说明180℃并非高活性窗口，而是导致催化剂失活的温度。该断言与上下文矛盾。"
+        },
+        {
+          "claim": "低温下积累的中间体在180 ℃下进一步转化为目标产物",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及低温下积累中间体及180℃下中间体进一步转化的相关内容。"
+        },
+        {
+          "claim": "高温促进产物从催化剂表面脱附或随气流移出，减少二次反应",
+          "verdict": "unsupported",
+          "evidence": "上下文[03-PATENT-CN2023102567-镍催化加氢-c005]明确指出180℃时发生'甲基环己烷脱氢芳构化及少量C-C键裂解等副反应'，说明高温下发生了二次反应而非减少二次反应。该断言与上下文矛盾。"
+        },
+        {
+          "claim": "若反应吸热或平衡受温度正向移动，升温提高平衡收率",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及该反应的热效应（吸热或放热）或平衡移动的相关内容。"
+        },
+        {
+          "claim": "高温降低体系粘度，传热传质更均匀，减少局部浓度不均",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及180℃下体系粘度变化、传热传质均匀性或局部浓度不均的相关内容。"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "q042",
+      "question": "格氏试剂过夜存放需要满足什么条件？",
+      "answer_text": "格氏试剂过夜存放需满足以下条件：\n\n- **惰性气氛**：在干燥的氮气或氩气保护下密封存放，隔绝氧气和水分。\n- **无水无氧溶剂**：通常保存在无水乙醚或无水THF中，溶剂需预先干燥除水。\n- **低温避光**：建议置于阴凉处（如0–5 °C或室温避光），避免高温和光照引发分解。\n- **密封容器**：使用干燥的密封瓶（如带 septum 的 Schlenk 瓶），避免使用磨口不严的容器。\n- **避免长时间存放**：格氏试剂稳定性有限，过夜可以，但不宜长期储存；使用前建议重新滴定浓度。\n- **安全防护**：远离火源、氧化剂，存放于通风良好处。\n\n不确定点：具体可存放时长与试剂种类（如甲基、苯基格氏试剂）、浓度和溶剂有关，不同体系稳定性差异较大，建议以实验室SOP或试剂供应商说明为准。",
+      "claims": [
+        {
+          "claim": "格氏试剂过夜存放需在干燥的氮气保护下密封存放，隔绝氧气和水分。",
+          "verdict": "supported",
+          "evidence": "过夜存放须经组长批准并充氮密封冷藏。"
+        },
+        {
+          "claim": "格氏试剂过夜存放需在干燥的氩气保护下密封存放，隔绝氧气和水分。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确为\"充氮密封\"，非氩气保护。"
+        },
+        {
+          "claim": "格氏试剂通常保存在无水乙醚中。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及THF作为溶剂，未提及乙醚。"
+        },
+        {
+          "claim": "格氏试剂通常保存在无水THF中。",
+          "verdict": "supported",
+          "evidence": "加入少量 THF 没过镁屑；将剩余卤代烃-THF 混合液缓慢滴加"
+        },
+        {
+          "claim": "无水乙醚需预先干燥除水。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及乙醚。"
+        },
+        {
+          "claim": "无水THF需预先干燥除水。",
+          "verdict": "supported",
+          "evidence": "溶剂四氢呋喃（THF）：须经钠丝-二苯甲酮回流至深蓝色且颜色稳定（表明深度干燥、无过氧化物），现蒸现用"
+        },
+        {
+          "claim": "格氏试剂建议置于0–5 °C阴凉处存放。",
+          "verdict": "unsupported",
+          "evidence": "上下文仅提及\"冷藏\"，未给出具体温度范围0–5°C。"
+        },
+        {
+          "claim": "格氏试剂建议室温避光存放。",
+          "verdict": "unsupported",
+          "evidence": "上下文明确为\"充氮密封冷藏\"，非室温存放。"
+        },
+        {
+          "claim": "格氏试剂应避免高温引发分解。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未明确提及高温导致分解，仅提及冷藏保存。"
+        },
+        {
+          "claim": "格氏试剂应避免光照引发分解。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及光照对格氏试剂的影响。"
+        },
+        {
+          "claim": "格氏试剂过夜存放需使用干燥的密封瓶。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及\"充氮密封冷藏\"，但未具体说明容器类型为\"密封瓶\"。"
+        },
+        {
+          "claim": "格氏试剂过夜存放需使用带septum的Schlenk瓶。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及Schlenk瓶或septum。"
+        },
+        {
+          "claim": "格氏试剂过夜存放应避免使用磨口不严的容器。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及磨口容器相关要求。"
+        },
+        {
+          "claim": "格氏试剂稳定性有限。",
+          "verdict": "supported",
+          "evidence": "格氏试剂应现制现用，不宜久置"
+        },
+        {
+          "claim": "格氏试剂过夜存放可以。",
+          "verdict": "supported",
+          "evidence": "过夜存放须经组长批准并充氮密封冷藏"
+        },
+        {
+          "claim": "格氏试剂不宜长期储存。",
+          "verdict": "supported",
+          "evidence": "格氏试剂应现制现用，不宜久置"
+        },
+        {
+          "claim": "格氏试剂使用前建议重新滴定浓度。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及滴定浓度。"
+        },
+        {
+          "claim": "格氏试剂存放应远离火源。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文提及\"全程严禁明火\"针对制备过程，未明确针对存放要求。"
+        },
+        {
+          "claim": "格氏试剂存放应远离氧化剂。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及氧化剂。"
+        },
+        {
+          "claim": "格氏试剂存放应置于通风良好处。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及通风要求。"
+        },
+        {
+          "claim": "格氏试剂具体可存放时长与试剂种类有关。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及不同试剂种类的存放时长差异。"
+        },
+        {
+          "claim": "格氏试剂具体可存放时长与浓度有关。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及浓度对存放时长的影响。"
+        },
+        {
+          "claim": "格氏试剂具体可存放时长与溶剂有关。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未提及溶剂对存放时长的影响。"
+        },
+        {
+          "claim": "不同体系格氏试剂稳定性差异较大。",
+          "verdict": "insufficient_info",
+          "evidence": "上下文未比较不同体系的稳定性差异。"
+        },
+        {
+          "claim": "格氏试剂存放建议以实验室SOP为准。",
+          "verdict": "supported",
+          "evidence": "整个上下文为SOP文档，且规定\"过夜存放须经组长批准并充氮密封冷藏\""
+        },
+        {
+          "claim": "格氏试剂存放建议以试剂供应商说明为准。",
+          "verdict": "unsupported",
+          "evidence": "上下文为实验室内部SOP，未提及供应商说明。"
+        }
+      ],
+      "status": "ok"
+    }
+  ]
+}

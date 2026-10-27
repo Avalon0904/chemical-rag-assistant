@@ -1,0 +1,42 @@
+{
+  "judge_overstrict_rate": {
+    "closed_book": {
+      "flipped": 12,
+      "total": 36,
+      "rate": 0.333,
+      "wilson95": [
+        0.202,
+        0.497
+      ]
+    },
+    "rag": {
+      "flipped": 4,
+      "total": 7,
+      "rate": 0.571,
+      "wilson95": [
+        0.25,
+        0.842
+      ]
+    }
+  },
+  "corrected": {
+    "rag_micro_hallucination": {
+      "point": 0.0125,
+      "range": [
+        0.0046,
+        0.0219
+      ]
+    },
+    "rag_macro_hallucination": {
+      "point": 0.0789
+    },
+    "closedbook_micro_hallucination": {
+      "point": 0.1884,
+      "range": [
+        0.1422,
+        0.2255
+      ]
+    }
+  },
+  "revision_note": "原人工分解中 q034×2 被判为真过度概括，人工裁决推翻：应为 supported。RAG 真幻觉收敛为 q013/q017/q028 三题各 1 条。"
+}

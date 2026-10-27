@@ -1,0 +1,10 @@
+{
+  "name": "hybrid_bm25_rrf_rerank",
+  "top_k": 10,
+  "total": 38,
+  "refuse_counted_separately": 5,
+  "hit_count": 38,
+  "hit_rate": 1.0,
+  "mrr": 0.8531,
+  "misses": []
+}

@@ -1,0 +1,43 @@
+{"id": "q001", "category": "factoid_number", "question": "THF（四氢呋喃）的沸点是多少？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "四氢呋喃（THF） | 109-99-9 | 66.0"}]}
+{"id": "q002", "category": "factoid_number", "question": "二氯甲烷的沸点是多少？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "二氯甲烷 | 75-09-2 | 39.8"}]}
+{"id": "q003", "category": "table_query", "question": "丙酮应该用什么干燥剂干燥？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "丙酮 | 67-64-1 | 56.1 | 互溶 | 3Å 或 4Å 分子筛"}]}
+{"id": "q004", "category": "safety", "question": "久置的二氯甲烷有什么安全风险？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "久置受光照可能生成光气"}]}
+{"id": "q005", "category": "factoid_number", "question": "DMF 的沸点是多少？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "N,N-二甲基甲酰胺（DMF） | 68-12-2 | 153.0"}]}
+{"id": "q006", "category": "sop_condition", "question": "格氏试剂引发困难时，SOP 建议的处理方法有哪些？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "补加碘晶体；②滴加 2–3 滴 1,2-二溴乙烷；③置于超声波浴中处理 5–10 min"}]}
+{"id": "q007", "category": "sop_condition", "question": "格氏反应引发后滴加卤代烃时，体系温度应控制在什么范围？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "滴加速度以控制体系温度在 25–30 ℃ 为准"}]}
+{"id": "q008", "category": "sop_condition", "question": "THF 深度干燥合格的标志是什么？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "钠丝-二苯甲酮回流至深蓝色且颜色稳定"}]}
+{"id": "q009", "category": "sop_condition", "question": "格氏反应开始前氮气置换至少要几次？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "氮气置换不少于 3 次"}]}
+{"id": "q010", "category": "sop_condition", "question": "反应剩余的格氏试剂废液应该怎么处理？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "缓慢滴加无水异丙醇进行淬灭"}]}
+{"id": "q011", "category": "safety", "question": "为什么格氏反应全程严禁明火？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "THF 蒸气易燃易爆"}]}
+{"id": "q012", "category": "factoid_number", "question": "金属钠的 CAS 号是多少？", "must_refuse": false, "gold": [{"doc": "02-SDS-金属钠.md", "anchor": "CAS 号：7440-23-5"}]}
+{"id": "q013", "category": "safety", "question": "金属钠着火可以用水基灭火器扑灭吗？", "must_refuse": false, "gold": [{"doc": "02-SDS-金属钠.md", "anchor": "严禁用水、泡沫或二氧化碳灭火器处理金属钠泄漏或火灾"}]}
+{"id": "q014", "category": "safety", "question": "金属钠应该如何储存？", "must_refuse": false, "gold": [{"doc": "02-SDS-金属钠.md", "anchor": "金属钠必须浸没于煤油或液体石蜡中密封保存"}]}
+{"id": "q015", "category": "safety", "question": "实验后残留的少量金属钠如何安全处理？", "must_refuse": false, "gold": [{"doc": "02-SDS-金属钠.md", "anchor": "用无水叔丁醇缓慢滴加淬灭"}]}
+{"id": "q016", "category": "safety", "question": "金属钠遇水会发生什么反应？", "must_refuse": false, "gold": [{"doc": "02-SDS-金属钠.md", "anchor": "生成氢氧化钠并放出氢气，反应放热可使氢气自燃甚至爆炸"}]}
+{"id": "q017", "category": "patent_condition", "question": "专利实施例 1 中加氢反应的温度和氢气压力分别是多少？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "通入氢气至 2.5 MPa，升温至 140 ℃"}]}
+{"id": "q018", "category": "patent_condition", "question": "专利实施例 1 的甲苯加氢收率是多少？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "收率 92.3%"}]}
+{"id": "q019", "category": "patent_condition", "question": "专利实施例 2 把温度升到 180 ℃ 后收率是多少？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "收率降至 77.8%"}]}
+{"id": "q020", "category": "explanation", "question": "专利中分析 180 ℃ 时收率下降的原因是什么？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "镍晶粒烧结长大、活性位数量减少；同时高温下发生甲基环己烷脱氢芳构化及少量 C-C 键裂解等副反应"}]}
+{"id": "q021", "category": "patent_condition", "question": "对比例 1 用 Pd/C 做催化剂的收率是多少？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "收率 88.4%"}]}
+{"id": "q022", "category": "patent_condition", "question": "该专利使用的催化剂是什么？镍的负载量多少？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "Ni/Al2O3 催化剂（Ni 负载量 10 wt%"}]}
+{"id": "q023", "category": "report_condition", "question": "实验报告得出的 2-甲基环己酮合成最佳反应温度是多少？", "must_refuse": false, "gold": [{"doc": "04-REPORT-2023-036-2-甲基环己酮工艺优化.md", "anchor": "最佳反应温度为 155 ℃"}]}
+{"id": "q024", "category": "report_condition", "question": "155 ℃ 时 2-甲基环己酮的收率和选择性分别是多少？", "must_refuse": false, "gold": [{"doc": "04-REPORT-2023-036-2-甲基环己酮工艺优化.md", "anchor": "155 | 97 | 96 | 93"}]}
+{"id": "q025", "category": "report_condition", "question": "温度升到 170 ℃ 后，2-甲基环己酮工艺主要出现什么问题？", "must_refuse": false, "gold": [{"doc": "04-REPORT-2023-036-2-甲基环己酮工艺优化.md", "anchor": "温度超过 170 ℃ 后选择性明显下降"}]}
+{"id": "q026", "category": "report_condition", "question": "批次 7 发生了什么异常，结果如何？", "must_refuse": false, "gold": [{"doc": "04-REPORT-2023-036-2-甲基环己酮工艺优化.md", "anchor": "温控阀故障，实际温度一度升至约 175 ℃，该批选择性降至 85%"}]}
+{"id": "q027", "category": "recommendation", "question": "按综述的建议，大宗芳烃饱和加氢首选哪类催化剂？", "must_refuse": false, "gold": [{"doc": "05-REVIEW-多相加氢催化剂进展.md", "anchor": "首选 Ni 系催化剂"}]}
+{"id": "q028", "category": "recommendation", "question": "底物含有羰基、苄基等官能团需要温和加氢条件时，综述推荐什么催化剂？", "must_refuse": false, "gold": [{"doc": "05-REVIEW-多相加氢催化剂进展.md", "anchor": "Pd/C 更合适"}]}
+{"id": "q029", "category": "recommendation", "question": "Ru/Al2O3 催化剂的主要缺点是什么？", "must_refuse": false, "gold": [{"doc": "05-REVIEW-多相加氢催化剂进展.md", "anchor": "价格极昂贵"}]}
+{"id": "q030", "category": "recommendation", "question": "镍基催化剂失活的主要原因有哪些？", "must_refuse": false, "gold": [{"doc": "05-REVIEW-多相加氢催化剂进展.md", "anchor": "硫/氯中毒、高温烧结和积碳"}]}
+{"id": "q031", "category": "cross_doc", "question": "制备格氏试剂需要深度干燥的 THF，查溶剂表应该用什么方法？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "钠丝-二苯甲酮回流（深度）"}, {"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "钠丝-二苯甲酮回流至深蓝色"}]}
+{"id": "q032", "category": "cross_doc", "question": "如果反应要用甲苯作溶剂，按速查表应该用什么方法干燥？", "must_refuse": false, "gold": [{"doc": "06-TABLE-常用有机溶剂物性与干燥.md", "anchor": "甲苯 | 108-88-3 | 110.6 | 不溶 | 钠丝；4Å 分子筛；共沸除水"}]}
+{"id": "q033", "category": "cross_doc", "question": "综合成本和效果，甲苯加氢制甲基环己烷应该选什么催化剂？", "must_refuse": false, "gold": [{"doc": "05-REVIEW-多相加氢催化剂进展.md", "anchor": "首选 Ni 系催化剂"}, {"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "Ni/Al2O3 催化剂"}]}
+{"id": "q034", "category": "cross_doc", "question": "实验报告的最佳温度 155 ℃ 与专利推荐的 130–150 ℃ 不完全一致，两份文档各自的理由是什么？", "must_refuse": false, "gold": [{"doc": "04-REPORT-2023-036-2-甲基环己酮工艺优化.md", "anchor": "综合收率与选择性，最佳反应温度为 155 ℃"}, {"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "温度过高导致镍晶粒烧结长大"}]}
+{"id": "q035", "category": "terminology", "question": "Hydrogenation 工艺里 Ni/Al2O3 的推荐温度区间是多少？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "反应温度 130–150 ℃"}]}
+{"id": "q036", "category": "factoid_number", "question": "CAS 号 7440-23-5 对应的是什么物质？", "must_refuse": false, "gold": [{"doc": "02-SDS-金属钠.md", "anchor": "CAS 号：7440-23-5"}]}
+{"id": "q037", "category": "must_refuse", "question": "实验室的微波炉可以用来加热化学反应吗？", "must_refuse": true, "gold": [], "note": "语料中无任何相关内容，系统应拒答而非编造"}
+{"id": "q038", "category": "must_refuse", "question": "乙酸乙酯的沸点是多少？", "must_refuse": true, "gold": [], "note": "陷阱题：溶剂速查表不含乙酸乙酯，考察系统会不会用模型内置知识冒充检索结果"}
+{"id": "q039", "category": "must_refuse", "question": "废钯碳催化剂的回收价格大概是多少？", "must_refuse": true, "gold": [], "note": "语料无价格信息，拒答"}
+{"id": "q040", "category": "must_refuse", "question": "高压加氢釜的最大允许工作压力是多少？", "must_refuse": true, "gold": [], "note": "语料无设备参数，拒答"}
+{"id": "q041", "category": "false_premise", "question": "专利实施例 2 在 180 ℃ 时收率上升到了 95%，可能的原因是什么？", "must_refuse": false, "gold": [{"doc": "03-PATENT-CN2023102567-镍催化加氢.md", "anchor": "收率降至 77.8%"}], "note": "前提错误：180 ℃ 收率实为下降至 77.8%。考察系统是否纠正错误前提而非顺着说"}
+{"id": "q042", "category": "sop_condition", "question": "格氏试剂过夜存放需要满足什么条件？", "must_refuse": false, "gold": [{"doc": "01-SOP-格氏试剂制备与使用.md", "anchor": "过夜存放须经组长批准并充氮密封冷藏"}]}
+{"id": "q043", "category": "must_refuse", "question": "正丁基锂发生泄漏时应如何处置？", "must_refuse": true, "gold": [], "note": "语料仅有金属钠 SDS，无正丁基锂资料。考察系统会不会跨文档类比编造：检索会命中金属钠 SDS，但那是另一种物质。正确行为：拒答并指引查阅该试剂 SDS 或联系 EHS"}

@@ -1,0 +1,339 @@
+[
+  {
+    "id": "q001",
+    "question": "THF（四氢呋喃）的沸点是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c001"
+    ]
+  },
+  {
+    "id": "q002",
+    "question": "二氯甲烷的沸点是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c002"
+    ]
+  },
+  {
+    "id": "q003",
+    "question": "丙酮应该用什么干燥剂干燥？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c001"
+    ]
+  },
+  {
+    "id": "q004",
+    "question": "久置的二氯甲烷有什么安全风险？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c002"
+    ]
+  },
+  {
+    "id": "q005",
+    "question": "DMF 的沸点是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c001"
+    ]
+  },
+  {
+    "id": "q006",
+    "question": "格氏试剂引发困难时，SOP 建议的处理方法有哪些？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c007"
+    ]
+  },
+  {
+    "id": "q007",
+    "question": "格氏反应引发后滴加卤代烃时，体系温度应控制在什么范围？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c005"
+    ]
+  },
+  {
+    "id": "q008",
+    "question": "THF 深度干燥合格的标志是什么？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c004"
+    ]
+  },
+  {
+    "id": "q009",
+    "question": "格氏反应开始前氮气置换至少要几次？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c005"
+    ]
+  },
+  {
+    "id": "q010",
+    "question": "反应剩余的格氏试剂废液应该怎么处理？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c008"
+    ]
+  },
+  {
+    "id": "q011",
+    "question": "为什么格氏反应全程严禁明火？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c006"
+    ]
+  },
+  {
+    "id": "q012",
+    "question": "金属钠的 CAS 号是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "02-SDS-金属钠-c001"
+    ]
+  },
+  {
+    "id": "q013",
+    "question": "金属钠着火可以用水基灭火器扑灭吗？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "02-SDS-金属钠-c005"
+    ]
+  },
+  {
+    "id": "q014",
+    "question": "金属钠应该如何储存？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "02-SDS-金属钠-c004"
+    ]
+  },
+  {
+    "id": "q015",
+    "question": "实验后残留的少量金属钠如何安全处理？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "02-SDS-金属钠-c006"
+    ]
+  },
+  {
+    "id": "q016",
+    "question": "金属钠遇水会发生什么反应？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "02-SDS-金属钠-c003"
+    ]
+  },
+  {
+    "id": "q017",
+    "question": "专利实施例 1 中加氢反应的温度和氢气压力分别是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c004"
+    ]
+  },
+  {
+    "id": "q018",
+    "question": "专利实施例 1 的甲苯加氢收率是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c004"
+    ]
+  },
+  {
+    "id": "q019",
+    "question": "专利实施例 2 把温度升到 180 ℃ 后收率是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c005"
+    ]
+  },
+  {
+    "id": "q020",
+    "question": "专利中分析 180 ℃ 时收率下降的原因是什么？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c005"
+    ]
+  },
+  {
+    "id": "q021",
+    "question": "对比例 1 用 Pd/C 做催化剂的收率是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c006"
+    ]
+  },
+  {
+    "id": "q022",
+    "question": "该专利使用的催化剂是什么？镍的负载量多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c004"
+    ]
+  },
+  {
+    "id": "q023",
+    "question": "实验报告得出的 2-甲基环己酮合成最佳反应温度是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "04-REPORT-2023-036-2-甲基环己酮工艺优化-c006"
+    ]
+  },
+  {
+    "id": "q024",
+    "question": "155 ℃ 时 2-甲基环己酮的收率和选择性分别是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "04-REPORT-2023-036-2-甲基环己酮工艺优化-c006"
+    ]
+  },
+  {
+    "id": "q025",
+    "question": "温度升到 170 ℃ 后，2-甲基环己酮工艺主要出现什么问题？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "04-REPORT-2023-036-2-甲基环己酮工艺优化-c006"
+    ]
+  },
+  {
+    "id": "q026",
+    "question": "批次 7 发生了什么异常，结果如何？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "04-REPORT-2023-036-2-甲基环己酮工艺优化-c005"
+    ]
+  },
+  {
+    "id": "q027",
+    "question": "按综述的建议，大宗芳烃饱和加氢首选哪类催化剂？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "05-REVIEW-多相加氢催化剂进展-c003"
+    ]
+  },
+  {
+    "id": "q028",
+    "question": "底物含有羰基、苄基等官能团需要温和加氢条件时，综述推荐什么催化剂？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "05-REVIEW-多相加氢催化剂进展-c003"
+    ]
+  },
+  {
+    "id": "q029",
+    "question": "Ru/Al2O3 催化剂的主要缺点是什么？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "05-REVIEW-多相加氢催化剂进展-c002"
+    ]
+  },
+  {
+    "id": "q030",
+    "question": "镍基催化剂失活的主要原因有哪些？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "05-REVIEW-多相加氢催化剂进展-c004"
+    ]
+  },
+  {
+    "id": "q031",
+    "question": "制备格氏试剂需要深度干燥的 THF，查溶剂表应该用什么方法？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c001",
+      "01-SOP-格氏试剂制备与使用-c004"
+    ]
+  },
+  {
+    "id": "q032",
+    "question": "如果反应要用甲苯作溶剂，按速查表应该用什么方法干燥？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "06-TABLE-常用有机溶剂物性与干燥-c001"
+    ]
+  },
+  {
+    "id": "q033",
+    "question": "综合成本和效果，甲苯加氢制甲基环己烷应该选什么催化剂？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "05-REVIEW-多相加氢催化剂进展-c003",
+      "03-PATENT-CN2023102567-镍催化加氢-c004"
+    ]
+  },
+  {
+    "id": "q034",
+    "question": "实验报告的最佳温度 155 ℃ 与专利推荐的 130–150 ℃ 不完全一致，两份文档各自的理由是什么？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "04-REPORT-2023-036-2-甲基环己酮工艺优化-c006",
+      "03-PATENT-CN2023102567-镍催化加氢-c005"
+    ]
+  },
+  {
+    "id": "q035",
+    "question": "Hydrogenation 工艺里 Ni/Al2O3 的推荐温度区间是多少？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c008"
+    ]
+  },
+  {
+    "id": "q036",
+    "question": "CAS 号 7440-23-5 对应的是什么物质？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "02-SDS-金属钠-c001"
+    ]
+  },
+  {
+    "id": "q037",
+    "question": "实验室的微波炉可以用来加热化学反应吗？",
+    "must_refuse": true,
+    "relevant_chunk_pks": []
+  },
+  {
+    "id": "q038",
+    "question": "乙酸乙酯的沸点是多少？",
+    "must_refuse": true,
+    "relevant_chunk_pks": []
+  },
+  {
+    "id": "q039",
+    "question": "废钯碳催化剂的回收价格大概是多少？",
+    "must_refuse": true,
+    "relevant_chunk_pks": []
+  },
+  {
+    "id": "q040",
+    "question": "高压加氢釜的最大允许工作压力是多少？",
+    "must_refuse": true,
+    "relevant_chunk_pks": []
+  },
+  {
+    "id": "q041",
+    "question": "专利实施例 2 在 180 ℃ 时收率上升到了 95%，可能的原因是什么？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "03-PATENT-CN2023102567-镍催化加氢-c005"
+    ]
+  },
+  {
+    "id": "q042",
+    "question": "格氏试剂过夜存放需要满足什么条件？",
+    "must_refuse": false,
+    "relevant_chunk_pks": [
+      "01-SOP-格氏试剂制备与使用-c006"
+    ]
+  },
+  {
+    "id": "q043",
+    "question": "正丁基锂发生泄漏时应如何处置？",
+    "must_refuse": true,
+    "relevant_chunk_pks": []
+  }
+]

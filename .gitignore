@@ -1,0 +1,27 @@
+# 虚拟环境与依赖
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 密钥
+.env
+
+# 本地向量库与缓存（可重建，不入库）
+milvus_chemical.db/
+answers_cache.json
+rewrite_cache.json
+data/manifest.json
+
+# 运行产物
+*.log
+reports/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 本地工作笔记
+HANDOVER.md
+思路和问题/

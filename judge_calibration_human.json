@@ -1,0 +1,269 @@
+{
+  "note": "人工判定与 kimi-k3 建议 43/43 一致（2026-10-21 用户裁决）",
+  "groups": {
+    "A_closedbook": [
+      {
+        "题号": "q001",
+        "断言": "THF（四氢呋喃）的常压沸点更准确约为 65–67 °C。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q002",
+        "断言": "二氯甲烷（DCM）的沸点约为 39.6 °C（常压，101.3 kPa）。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q003",
+        "断言": "可用：分子筛（3A/4A）适合深度干燥丙酮。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q005",
+        "断言": "DMF 的文献常见沸点值范围约 152–154 °C。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q006",
+        "断言": "使用新剪/新锉的镁屑可机械活化镁",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q007",
+        "断言": "格氏反应引发后滴加卤代烃时，体系温度通常控制在 20–40 ℃",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q009",
+        "断言": "建议不以固定次数为准",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q010",
+        "断言": "水相需中和至中性后按含盐废水处理",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q011",
+        "断言": "格氏试剂本身对卤代烃敏感",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q013",
+        "断言": "应使用干燥的氯化钠粉末扑灭金属钠火灾。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q015",
+        "断言": "少量残留钠的安全处理步骤包括隔离，将残留钠置于干燥的沙盘或耐腐蚀容器中，远离水、酸、卤代烃等。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q018",
+        "断言": "无法确定。原因：您未提供具体专利（公开号/申请号）及实施例1的原文内容，我无法检索或核对其中甲苯加氢的收率数据。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q019",
+        "断言": "我无法回答这个问题。",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q020",
+        "断言": "目标产物或关键中间体在 180 ℃ 发生热分解或聚合。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q021",
+        "断言": "问题中未提供对比例 1 的 Pd/C 用量。",
+        "human_verdict": "supported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q022",
+        "断言": "不确定。原因：你没有提供专利号或专利全文，我无法定位\"该专利\"具体指哪一件，因此无法确认其使用的催化剂及镍负载量。请补充专利公开号/申请号或相关段落，我再据此回答。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q023",
+        "断言": "问题中未给出实验条件。",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q024",
+        "断言": "无法给出2-甲基环己酮的选择性数值",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q025",
+        "断言": "高温下副反应（过度氧化、异构化、缩合/聚合）增多，目标产物收率降低。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q026",
+        "断言": "请补充异常类型线索（如收率、纯度、温度、压力、粒径、粘度、颜色、杂质等）。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q027",
+        "断言": "通常首选负载型贵金属催化剂，如 Pd、Pt 负载于 Al₂O₃、SiO₂ 或分子筛载体，低温活性高、芳烃饱和能力强，适用于深度加氢。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q028",
+        "断言": "综述通常推荐负载型贵金属催化剂，尤其是Pd/C（钯碳）",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q030",
+        "断言": "高温会加剧镍基催化剂的积碳。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q031",
+        "断言": "蒸馏前需先检验并去除过氧化物",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q032",
+        "断言": "甲苯更严格无水时可用4A分子筛干燥",
+        "human_verdict": "supported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q033",
+        "断言": "负载型Pt催化剂（如Pt/Al₂O₃）寿命长",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q034",
+        "断言": "不确定的原因是缺少两份文档的具体内容（实验数据表、专利实施例/权利要求、所述效果数据），无法判断各自理由。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q035",
+        "断言": "Ni/Al₂O₃ 催化加氢常用温度为 120–200 °C",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q036",
+        "断言": "钠是一种碱金属元素",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q041",
+        "断言": "在该温度区间主反应路径占优，竞争副反应活化能更高、升温不利",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q042",
+        "断言": "格氏试剂过夜存放需在干燥的氩气保护下密封存放，隔绝氧气和水分。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      }
+    ],
+    "A_plus_q030": [
+      {
+        "题号": "q030",
+        "断言": "卤素改变镍基催化剂的活性位。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q030",
+        "断言": "原料中H₂S含硫化合物强吸附于Ni活性位。",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q030",
+        "断言": "碳质沉积覆盖镍基催化剂的活性位。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q030",
+        "断言": "上述失活原因为通用归纳。",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q030",
+        "断言": "硫中毒后再生困难。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      }
+    ],
+    "B_rag": [
+      {
+        "题号": "q013",
+        "断言": "关于水基灭火器与金属钠的具体相容性，语料中没有关于水基灭火器扑救金属钠火灾的专门依据。",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q014",
+        "断言": "金属钠储存时须严格防潮防水[5]",
+        "human_verdict": "supported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q017",
+        "断言": "语料中没有关于专利实施例 1 中氢气压力的依据",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q028",
+        "断言": "综述推荐 Pd/C 催化剂",
+        "human_verdict": "unsupported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q031",
+        "断言": "建议查阅该化学品 SDS 或联系 EHS 确认",
+        "human_verdict": "insufficient_info",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q034",
+        "断言": "报告以 170 ℃ 以上选择性下降为依据设定温度上限",
+        "human_verdict": "supported",
+        "judge_verdict": "unsupported"
+      },
+      {
+        "题号": "q034",
+        "断言": "专利以 180 ℃ 实验及催化剂烧结分析为依据设定温度上限",
+        "human_verdict": "supported",
+        "judge_verdict": "unsupported"
+      }
+    ]
+  }
+}
